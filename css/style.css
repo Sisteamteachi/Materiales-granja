@@ -1,61 +1,190 @@
-/* /* .navbar-nav{
-    background-color: blue;
-    padding: 10px 0 15px 0 ;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
 }
-.navbar-nav__ul-li{
-    display: inline;
-    padding: 20px;
+header{
+    margin-top: 3em;
+}
+.navegacion-nav{
+    margin-top: -3em;
+    display: flex;
+    background-color:#061d49 ;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+
+.navegacion-nav img{
+    width: 50px;
+}
+
+.navegacion-nav__ul{
+    margin-top: 1em;
+    margin-left: 10px;
+}
+
+.navegacion-nav__ul-li{
+ list-style: none;
+ display: inline;
+}
+
+.navegacion-nav__ul-li a{
+    color: black;
+    text-decoration: none;
     color: white;
-    text-align: center;
-}
-.navbar-nav__ul-li:hover{
-    background-color:gold ;
-} */
-
-/* .cajas-h1{
-    padding: 10px;
-    background-color: gold;
-    display: inline-block;
-    box-sizing: border-box;
-    text-align: center;
-    margin: 20px 10px;
-    border: 2em;
-    box-shadow: -70px 1px 4px 1px  #000;
-} */
-
-/* .caja1{
-    width: 200px;
-    height: 200px;
-    background: red;
-    margin: auto;
-
+    padding: 1em;
 }
 
-.caja2{
-    width: 200px;
-    height: 200px;
-    background: yellow;
-    margin: auto;
-    outline: 10px rgb(17, 0, 255) solid;
-} */
-/*
-div{
-    width: 100px;
-    height: 100px;
+.banner-section{
+    display: flex;
+}
+
+.banner-section__div-colum1{
+    background: #8b5454;
+    width: 80%;
+    height: 39.9vw;
+}
+
+.banner-section__div-colum1 img{
+    width: 100%;
+    height: 100%;
+}
+.banner-section__div-colum2{
     display: block;
+    width: 20%;
+}
+.banner-section__div-colum2 img{
+    margin-top: 0px;
+    width: 100%;
 }
 
-.caja1{
- background-color: yellow;
+.container-section{
+    margin:5% 6% ;
+    display: flex;
+}
+.container-section__div-colum1{
+    width: 50%;
+}
+.container-section__div-colum2{
+    width: 50%;
+}
+.container-section__div-colum2 h1{
+    font-size: 3em;
+    color: #c3d600;
+}
+.container-section__div-colum2 p{
+   width: 80%;
+   color: #061d49;
+   line-height: 2em;
+   font-family: 'Inclusive Sans', sans-serif;
 }
 
-.caja2{
-    background-color: lightblue;
+.container-section2{
+    margin:5% 6% ;
+
+}
+
+.container-section2__div-colum1 h1{
+    font-size: 3.5em;
+    color: #0db6b4;
+}
+
+.container-section2__div-colum2{
+    display: flex; 
+}
+
+
+.container{
+    margin-right: 10px;
     position: relative;
 }
-.caja3{
-    background-color:orange ;
+
+.container img{
+    width: 100%;
+    height: 100%;
 }
-.caja4{
-    background-color:greenyellow ;
-} */
+
+.overlay {
+    position: absolute; /* Se superpone en relación con el contenedor */
+    top: 0;
+    left: 0;
+    width: 100%; /* Toma el ancho completo del contenedor */
+    height: 100%; /* Toma la altura completa del contenedor */
+    background-color: #0db6b4; /* Fondo semitransparente (negro en este caso) */
+    opacity: 0; /* Se puede cambiar para ajustar la transparencia */
+    transition: opacity 0.3s ease; /* Agrega una transición suave para el efecto fade */
+  }
+
+  .container:hover .overlay {
+    opacity: 1; /* Hacer visible el overlay cuando el mouse está sobre el contenedor */
+  }
+
+  .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+  }
+
+  @media (max-width: 1669px) {
+    /* *{
+        background: #061d49;
+    } */
+    .container-section{
+        display: flex;
+    }
+    .container-section__div-colum1{
+        width: 100%;
+    }
+    .container-section__div-colum2{
+        width: 80%;
+        
+    }
+  }
+
+  @media (max-width: 1537px) {
+    /* *{
+        background: #061d49;
+    } */
+    .container-section{
+        display: block;
+    }
+    .container-section__div-colum1{
+        width: 100%;
+    }
+    .container-section__div-colum1 iframe{
+        width: 100%;
+    }
+    .container-section__div-colum2{
+        width: 100%;
+    }
+    .container-section__div-colum2 h1{
+        text-align: center;
+    }
+    .container-section__div-colum2 p{
+        width: 100%;
+    }
+  }
+
+  @media (max-width:1158px){
+    .container-section2__div-colum2{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 2fr 2fr;
+    }
+    .container-section2__div-colum2 .container{
+        width: 100%;
+    }
+  }
+
+  @media (max-width: 510px) {
+    .container-section2__div-colum2{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr;
+    }
+  }
