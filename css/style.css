@@ -16,9 +16,12 @@ header{
 }
 .navegacion-nav__a{
     width: 50%;
+    margin-top: 500px;
 }
 .navegacion-nav__a-img{
-    width: 7%;
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 12px;
 }
 
 .navegacion-nav .navegacion-nav__ul{
@@ -201,7 +204,7 @@ header{
     }
   }
 
-  @media (max-width: 873px) {
+  @media (max-width: 894px) {
     .checkbtn{
         display: block;
     }
