@@ -13,6 +13,7 @@ header{
     background-color: #061d49;
     position: fixed;
     margin-top: -3em;
+    z-index:1000
 }
 .navegacion-nav__a{
     width: 50%;
