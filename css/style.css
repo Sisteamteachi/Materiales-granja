@@ -5,22 +5,25 @@
 }
 header{
     margin-top: 3em;
+    background: #061d49;
 }
 
 .navegacion-nav{
     height: 80px;
     width: 100%;
-    background-color: #061d49;
+    background-color: #ef8e37;
     position: fixed;
     margin-top: -3em;
-    z-index:1000
+    z-index:1000;
+    box-shadow: 10px 1px 1px #ef8e37;
+
 }
 .navegacion-nav__a{
     width: 50%;
     margin-top: 500px;
 }
 .navegacion-nav__a-img{
-    width: 50px;
+    width: 150px;
     margin-top: 10px;
     margin-left: 12px;
 }
@@ -44,8 +47,8 @@ header{
 }
 
 .navegacion-nav .navegacion-nav__ul li a:hover{
-    background-color: #c3d600;
-    color: #061d49;
+    background-color: #2170c3;
+    color: white;
     transition: .5;
 }
 .checkbtn{
@@ -61,24 +64,29 @@ header{
     display:none ;
 }
 
-
-
 .banner-section{
+    margin-top: 30px;
     display: flex;
 }
 
 .banner-section__div-colum1{
-    width: 80%;
+    width: 30%;
     height: 39.9vw;
 }
 
-.banner-section__div-colum1 img{
-    width: 100%;
-    height: 100%;
+.banner-section__div-h1{
+    margin-top: 25%;
+    font-size: 3em;
+    margin-left: 3%;
+}
+.banner-section__div-p{
+    line-height: 2em;
+    margin-left: 3%;
+    margin-right: 3% ;
 }
 .banner-section__div-colum2{
-    display: block;
-    width: 20%;
+    display: flex;
+    width: 70%;
 }
 .banner-section__div-colum2 img{
     margin-top: 0px;
@@ -92,23 +100,29 @@ header{
 .container-section__div-colum1{
     width: 50%;
 }
+.container-section__div-colum1 iframe{
+    width: 100%;
+    height: 100%;
+}
 .container-section__div-colum2{
+    
     width: 50%;
 }
 .container-section__div-colum2 h1{
     font-size: 3em;
-    color: #c3d600;
+    color: #ef8e37;
+    margin-left: 20px;
 }
 .container-section__div-colum2 p{
    width: 80%;
-   color: #061d49;
+   color: black;
    line-height: 2em;
+   margin-left: 20px;
    font-family: 'Inclusive Sans', sans-serif;
 }
 
 .container-section2{
     margin:5% 6% ;
-
 }
 
 .container-section2__div-colum1 h1{
@@ -141,9 +155,9 @@ header{
     transition: opacity 0.3s ease; /* Agrega una transición suave para el efecto fade */
   }
 
-  .container:hover .overlay {
-    opacity: 1; /* Hacer visible el overlay cuando el mouse está sobre el contenedor */
-  }
+  /* .container:hover .overlay {
+    opacity: 1; 
+  } */
 
   .overlay-content {
     position: absolute;
@@ -154,10 +168,8 @@ header{
     font-size: 24px;
   }
 
-  @media (max-width: 1669px) {
-    /* *{
-        background: #061d49;
-    } */
+  /* @media (max-width: 1669px) {
+
     .container-section{
         display: flex;
     }
@@ -171,9 +183,7 @@ header{
   }
 
   @media (max-width: 1537px) {
-    /* *{
-        background: #061d49;
-    } */
+
     .container-section{
         display: block;
     }
@@ -251,4 +261,4 @@ header{
         gap: 10px;
         grid-template-columns: 1fr;
     }
-  }
+  } */
