@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Argos</title>
-    <link rel="icon" type="image/png" href="./img/logo.jpg">
+    <link rel="icon" type="image/png" href="./img/logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 </head>
 <body>
@@ -21,29 +21,30 @@
             <img class="navegacion-nav__a-img" src="./img/logo.png" alt="logo">
        </a>
        <ul class="navegacion-nav__ul">
+        <li class="navegacion-nav__ul-li  ">
+            <a href="#banner">Inicio</a>
+        </li>
         <li class="navegacion-nav__ul-li">
-            <a href="">ACERCA DE ARGOS</a>
+            <a href="#MV">ACERCA DE</a>
+        </li>
+
+        <!-- <li class="navegacion-nav__ul-li">
+            <a href="">MISIÓN y VISIÓN</a>
+        </li> -->
+
+        <li class="navegacion-nav__ul-li">
+            <a href="">SERVICIOS</a>
         </li>
 
         <li class="navegacion-nav__ul-li">
-            <a href="">INVERSIONISTA</a>
-        </li>
-
-        <li class="navegacion-nav__ul-li">
-            <a href="">PRODUCTOS</a>
-        </li>
-
-        <li class="navegacion-nav__ul-li">
-            <a href="">SOSTENIBILIDAD</a>
-        </li>
-        <li class="navegacion-nav__ul-li">
-            <a href="">CAMBIO CLIMATICO</a>
+            <a href="">Contactanós</a>
         </li>
        </ul>
     </nav>
 </header> 
 <hr>
-<section class="banner-section">
+
+<section class="banner-section" id="banner">
     <div class="banner-section__div-colum1">
 
         <h1 class="banner-section__div-h1">¡Inspiramos un futuro sostenible!</h1>
@@ -53,32 +54,29 @@
     </div>
     <div class="banner-section__div-colum2">
         <div class="">
-            <img src="./img/logo.jpg" alt="">
+            <img src="./img/Banner1.jpg" alt="">
         </div>
         <div class="">
-            <img src="./img/logo.jpg" alt="">
+            <img src="./img/Banner2.jpg" alt="">
+        </div>
+        <div>
+            <img src="./img/Banner3.jpg" alt="">
         </div>
         
     </div>
 </section>
 
-<section class="container-section">
-    <div class="container-section__div-colum1">
-        <iframe  src="https://www.youtube.com/embed/LrpZEIoEy98" title="¡Logramos un hito histórico! Combinación de Argos North America y Summit Materials." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-    <div class="container-section__div-colum2">
-        <h1>Logro histórico</h1>
-        <p>Combinaremos nuestras operaciones en Estados Unidos con Summit Materials, compañía listada en NYSE, para crear una plataforma líder de materiales de construcción con escala nacional. Contará con un portafolio verticalmente integrado y presencia geográfica en 30 estados, en mercados complementarios y áreas urbanas con alto crecimiento.</p>
-    </div>
-</section>
 
 <section class="container-section2">
+
     <div class="container-section2__div-colum1">
-        <h1>Nuestro compromiso</h1>
+        <h1>SERVICIOS</h1>
     </div>
+
     <div class="container-section2__div-colum2">
+
         <div class="container">
-            <img src="./img/logo.jpg" alt="">
+            <img src="./img/Banner1.jpg" alt="">
             <div class="overlay">
                 <div class="overlay-content">
                     <h2>
@@ -92,7 +90,7 @@
         </div>
 
         <div class="container">
-            <img src="./img/logo.jpg" alt="">
+            <img src="./img/Banner1.jpg" alt="">
             <div class="overlay">
                 <div class="overlay-content">
                     <h2>
@@ -106,7 +104,7 @@
         </div>
         
         <div class="container">
-            <img src="./img/logo.jpg" alt="">
+            <img src="./img/Banner1.jpg" alt="">
             <div class="overlay">
                 <div class="overlay-content">
                     <h2>
@@ -120,7 +118,7 @@
         </div>
         
         <div class="container">
-            <img src="./img/logo.jpg" alt="">
+            <img src="./img/Banner1.jpg" alt="">
             <div class="overlay">
                 <div class="overlay-content">
                     <h2>
@@ -136,7 +134,26 @@
         
     </img>
 </section>
+<section class="Mision_y_vision-section" id="MV">
+    <h1 class="Mision_y_vision-section__h1">Misión y Visión</h1>
+    <div class="Mision_y_vision-section_row">
 
+        <div class="card card-Mision">
+            <h1> <i class="bi bi-map-fill"></i>  Misión</h1>
+            <p>
+                La misión de la Fundación alegria de un pueblo es construir un futuro más próspero y equitativo para los habitantes del Chocó. Se enfocan en desarrollar proyectos y programas que promuevan la educación, la salud, el acceso a recursos básicos, el emprendimiento y la conservación del medio ambiente. Además, trabajan en estrecha colaboración con las comunidades locales para asegurarse de que sus esfuerzos sean participativos y adecuados a las necesidades específicas de cada región.
+            </p>
+        </div>
+
+        <div class="card card-Vision">
+            <h1><i class="bi bi-person-arms-up"></i> Visión</h1>
+            <p>
+                Nuestra visión es un Chocó próspero, equitativo y sostenible, donde todas las personas, sin importar su origen o condición, tengan acceso a oportunidades que les permitan desarrollar su máximo potencial. Anhelamos un futuro en el que las comunidades locales sean protagonistas de su propio desarrollo, empoderadas para enfrentar los desafíos y aprovechar las oportunidades que se presenten.
+            </p>
+        </div>
+    </div>
+</section>
+<script src="main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 

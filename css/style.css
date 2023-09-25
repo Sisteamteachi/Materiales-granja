@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 *{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins';
 }
 header{
     margin-top: 3em;
@@ -11,11 +12,11 @@ header{
 .navegacion-nav{
     height: 80px;
     width: 100%;
-    background-color: #ef8e37;
+    background-color: #4E9AD0;
     position: fixed;
     margin-top: -3em;
     z-index:1000;
-    box-shadow: 10px 1px 1px #ef8e37;
+    box-shadow: 10px 1px 50px white;
 
 }
 .navegacion-nav__a{
@@ -44,10 +45,11 @@ header{
     text-decoration: none;
     padding: 7px 13px;
     border-radius: 3px;
+    text-transform:  uppercase;
 }
 
 .navegacion-nav .navegacion-nav__ul li a:hover{
-    background-color: #2170c3;
+    background-color: #fda04f;
     color: white;
     transition: .5;
 }
@@ -64,6 +66,17 @@ header{
     display:none ;
 }
 
+.banner-section{
+    margin-top: 2%;
+}
+/* mitad banner 1*/
+
+
+
+/* mitad banner 2*/
+
+
+/*slider */
 .banner-section{
     margin-top: 30px;
     display: flex;
@@ -91,52 +104,36 @@ header{
 .banner-section__div-colum2 img{
     margin-top: 0px;
     width: 100%;
+    height: 40rem;
 }
 
-.container-section{
-    margin:5% 6% ;
-    display: flex;
-}
-.container-section__div-colum1{
-    width: 50%;
-}
-.container-section__div-colum1 iframe{
-    width: 100%;
-    height: 100%;
-}
-.container-section__div-colum2{
-    
-    width: 50%;
-}
-.container-section__div-colum2 h1{
-    font-size: 3em;
-    color: #ef8e37;
-    margin-left: 20px;
-}
-.container-section__div-colum2 p{
-   width: 80%;
-   color: black;
-   line-height: 2em;
-   margin-left: 20px;
-   font-family: 'Inclusive Sans', sans-serif;
-}
 
 .container-section2{
     margin:5% 6% ;
+    
 }
 
 .container-section2__div-colum1 h1{
-    font-size: 3.5em;
-    color: #0db6b4;
+    text-align: center;
+    color: #276591;
+    font-size: 4rem;
+    text-transform:  uppercase;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    letter-spacing: 1rem;
 }
 
 .container-section2__div-colum2{
     display: flex; 
+    padding: 50px;
+    /* background: #061d49; */
 }
 
 .container{
     margin-right: 10px;
     position: relative;
+    height: 36rem;
 }
 
 .container img{
@@ -150,14 +147,14 @@ header{
     left: 0;
     width: 100%; /* Toma el ancho completo del contenedor */
     height: 100%; /* Toma la altura completa del contenedor */
-    background-color: #0db6b4; /* Fondo semitransparente (negro en este caso) */
+    background-color: #276591; /* Fondo semitransparente (negro en este caso) */
     opacity: 0; /* Se puede cambiar para ajustar la transparencia */
     transition: opacity 0.3s ease; /* Agrega una transición suave para el efecto fade */
   }
 
-  /* .container:hover .overlay {
+  .container:hover .overlay {
     opacity: 1; 
-  } */
+  }
 
   .overlay-content {
     position: absolute;
@@ -167,6 +164,62 @@ header{
     color: white;
     font-size: 24px;
   }
+
+
+.Mision_y_vision-section{
+    margin: 2% 10%;
+}
+.Mision_y_vision-section__h1{
+    text-align: center;
+    color: #276591;
+    font-size: 3rem;
+    text-transform:  uppercase;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+    font-weight: 600;
+    letter-spacing: 1rem;
+}
+
+.Mision_y_vision-section_row{
+    display: flex;
+}
+
+.card{
+    border-radius: 22px;
+    width: 50%;
+    height: 380px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+ .card h1{
+    text-align: center;
+}
+.card p{
+    margin: 2%;
+    font-size: 1.4rem;
+}
+.card-Mision{
+    border: 1px solid #2170c3;
+    box-shadow: -15px 10px 25px rgba(0,0,0,0.6);
+}
+.card-Vision{
+    border: 1px solid #ef8e37;
+    box-shadow: 15px 10px 50px rgba(0,0,0,0.6);
+}
+
+.card-Mision h1{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    color:#ef8e37 ;
+}
+
+.card-Vision h1{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    color: #2170c3;
+}
+
+
 
   /* @media (max-width: 1669px) {
 
@@ -213,7 +266,7 @@ header{
     .container-section2__div-colum2 .container{
         width: 100%;
     }
-  }
+  }*/
 
   @media (max-width: 894px) {
     .checkbtn{
@@ -261,4 +314,4 @@ header{
         gap: 10px;
         grid-template-columns: 1fr;
     }
-  } */
+  } /**/
