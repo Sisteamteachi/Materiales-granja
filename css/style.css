@@ -395,6 +395,9 @@ footer{
     background-color: #0B6884;
 }
 
+.contacto a{
+    color: white;
+}
   /* @media (max-width: 1669px) {
 
     .container-section{
