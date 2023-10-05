@@ -184,17 +184,20 @@ header{
 
 .img1:hover{
     transform: scale(1.19); 
+    transition: 0.5s ease-out;
     opacity: 1;
 }
 
 .img2:hover{
-    transform: scale(2.2);
+    transform: scale(1.8);
     transform-origin: right;
+    transition: 1.5s ease-out;
     opacity: 1;
 }
 
 .img3:hover{
     transform: scale(1.28);
+    transition: 0.5s ease-out;
     opacity: 1;
 }
 
