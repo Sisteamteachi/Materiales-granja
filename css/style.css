@@ -112,7 +112,7 @@ header{
 
 .banner-h1{
     color: #052A38;
-    font-size: 5rem;
+    font-size: 3.5rem;
     text-transform:  uppercase;
     font-weight: 600;
     font-family: 'Mulish';
@@ -128,7 +128,6 @@ header{
     padding-bottom: 30px;
 }
 .banner-p{
-
     font-size: 2rem;
     margin-top: 3rem;
     letter-spacing: .7rem;
@@ -147,7 +146,7 @@ header{
 
 
 .text-centerP{
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
     color:#000000;
     position: relative;
