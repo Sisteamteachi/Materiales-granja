@@ -1,4 +1,6 @@
 
+gsap.from(".banner-section", { duration: 2.5, fadein: true, x: -500, scrollTrigger:".banner-section"});
+// gsap.from(".banner-section__div-colum2", { duration: 2.5, fadein: true, x:500, scrollTrigger:".banner-section__div-colum2"});
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
