@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dosis:wght@500&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dosis:wght@500&family=Mulish&family=Poppins&display=swap');
 *{
     font-family: 'Poppins';
 }
 body{
-    background-color: #f2f2f3;
+    background-color: #f2f2f4;
 }
 header{
     margin-top: 3em;
@@ -16,11 +17,11 @@ header{
 .navegacion-nav{
     height: 80px;
     width: 100%;
-    background-color: #0B6884;
+    background-color: #88def8;
     position: fixed;
     margin-top: -3em;
     z-index:1000;
-    box-shadow: 10px 1px 50px white;
+    box-shadow: 10px 1px 50px rgb(198, 196, 196);
 
 }
 .navegacion-nav__a{
@@ -45,16 +46,17 @@ header{
 }
 
 .navegacion-nav .navegacion-nav__ul li a{
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     padding: 7px 13px;
+    font-weight: 600;
     border-radius: 3px;
     text-transform:  uppercase;
 }
 
 .navegacion-nav .navegacion-nav__ul li a:hover{
-    background-color: #fda04f;
-    color: white;
+    background-color: #ffc28d;
+    border-radius: 40px;
     transition: .5;
 }
 .checkbtn{
@@ -101,34 +103,20 @@ header{
 .banner-section__div-colum1{
     /* background: #8b5454; */
     width: 30%;
-    height: 39.9vw;
+    height: 37.5vw;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
 }
 
-.banner-section__div-colum1::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    right:0 ;
-    width: 70%;
-    height: 90%;
-    z-index: -1;
-    background-color: black;
-    opacity: 0.4;
-    border-radius: 22px;
-
-}
-
 .banner-h1{
     color: #052A38;
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-transform:  uppercase;
     font-weight: 600;
-    /* font-family: 'Bebas Neue'; */
-    letter-spacing: 1rem;
+    font-family: 'Mulish';
+    letter-spacing: .4rem;
     margin-bottom: 100px;
     
 }
@@ -140,33 +128,88 @@ header{
     padding-bottom: 30px;
 }
 .banner-p{
-
     font-size: 2rem;
     margin-top: 3rem;
-    letter-spacing: .5rem;
+    letter-spacing: .7rem;
 }
 
 .banner-section__div-colum2{
     display: flex;
     width: 70%;
 }
+
 .banner-section__div-colum2 img{
-    margin-top: 0px;
+    margin-top: 2px;
     width: 100%;
-    height: 50rem;
-    
+    height: 105%;
 }
-.img1{
+
+
+.text-centerP{
+    font-size: 2rem;
+    text-align: center;
+    color:#000000;
+    position: relative;
+    top: -8rem;
+}
+
+/*.text-centerP:hover{
+font-size: 3.8rem;
+color: #f2f2f4;
+position: relative;
+}*/
+
+.fondo-img{
+    overflow: hidden;
+    height: 37vw;
     border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+}
+
+.img1 {
+    border-bottom-left-radius: 22px;
+    position: relative; /* Asegura que los estilos se apliquen correctamente */
+    opacity: .7; /* Se puede cambiar para ajustar la transparencia */
+    transition: opacity 0.5s ease-out;
+    transform-origin: center; 
+}
+
+.img2{
+    transform-origin: center; /* Establecemos el punto de origen de la transformación en el centro */
+    opacity: .7; /* Se puede cambiar para ajustar la transparencia */
+    transition: opacity 0.5s ease-out;
 }
 
 .img3{
+    transform-origin: center; /* Establecemos el punto de origen de la transformación en el centro */
+    opacity: .7; /* Se puede cambiar para ajustar la transparencia */
+    transition: opacity 0.5s ease-out;
     border-bottom-right-radius: 22px;
 }
-.container-section2{
-    margin:8% 6% ;
-    
+
+.img1:hover{
+    transform: scale(1.19); 
+    transition: 0.5s ease-out;
+    opacity: 1;
 }
+
+.img2:hover{
+    transform: scale(1.8);
+    transform-origin: right;
+    transition: 1.5s ease-out;
+    opacity: 1;
+}
+
+.img3:hover{
+    transform: scale(1.28);
+    transition: 0.5s ease-out;
+    opacity: 1;
+}
+
+.container-section2{
+    margin:8% 6% ;    
+}
+
 
 .container-section2 h1{
     /* text-align: center; */
@@ -190,9 +233,9 @@ header{
 }
 
 .container-section3__div-colum1 h1{
-    /* text-align: center; */
+    text-align: center;
     color: #276591;
-    font-size: 4rem;
+    font-size: 3rem;
     text-transform:  uppercase;
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -202,6 +245,7 @@ header{
 
 .container-section3__div-colum2{
     display: flex; 
+    left: 35rem;
     padding: 50px;
     gap: 100px
 }
@@ -227,9 +271,9 @@ header{
 }
 
 .contenedor-section4__div-colum1 h1{
-    /* text-align: center; */
+    text-align: center;
     color: #276591;
-    font-size: 4rem;
+    font-size: 3rem;
     text-transform:  uppercase;
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -246,8 +290,6 @@ header{
     /* background: #061d49; */
  
 }
-
-
 
 .contenedor2{
     margin-right: 10px;
@@ -331,6 +373,21 @@ border-radius: 32px;
  
 }
 
+
+.carta-Mision:hover{
+    background-color: #004d80;
+    color: #f2f2f4;
+}
+
+.carta-Vision:hover{
+    background-color: #DE8E17;
+    color: #f2f2f4;
+}
+
+.bi-map-fill:hover{
+    color: #f2f2f4;
+}
+
 .carta2 h1{
     height: 0.1%;
 }
@@ -389,6 +446,7 @@ border-radius: 32px;
 
 
 footer{
+    margin-top: 6rem;
     position: absolute;
     width: 100%;
     color: white;
@@ -491,4 +549,35 @@ footer{
         gap: 10px;
         grid-template-columns: 1fr;
     }
-  } /**/
+  }
+
+
+
+
+
+/*@media (max-width: 894px) {
+    .checkbtn {
+        display: block;
+    }
+
+    .navegacion-nav__ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #061d49;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .navegacion-nav .navegacion-nav__ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    #check:checked ~ .navegacion-nav__ul {
+        left: 0;
+    }
+}*/
