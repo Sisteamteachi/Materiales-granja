@@ -302,8 +302,14 @@ position: relative;
     height: 100%;
 
 }
-
-
+.card{
+    border-radius: 16px;
+    
+}
+.card-title{
+    text-transform: uppercase;
+    text-align: center;
+}
 .overlay2 {
     position: absolute; /* Se superpone en relación con el contenedor */
     top: 0;
@@ -355,7 +361,7 @@ border-radius: 32px;
     margin-left:10%;
     margin-right: 10%;
     
-    margin-top: 50px;
+    margin-top: 10%;
     margin-bottom: 200px ;
 }
 
@@ -473,7 +479,9 @@ footer{
     .fondo-img{
         height: 100%;
     }
-
+    .carta{
+       height: 430px;
+    }
 }
 @media (max-width: 1300px) {
 
@@ -528,9 +536,15 @@ footer{
     }
   }
   @media (max-width:500px) {
+    
+    .banner-section{
+        margin-top: 25%;
+    }
+
     .banner-section__div-colum1 h1{
        font-size:  2.5rem;
     }
+
 
     .container-section2 h1{
         font-size: 1.5rem;
@@ -541,9 +555,42 @@ footer{
     .contenedor-section4__div-colum1 h1 {
         font-size: 2.5rem;
     }
-
+    .container-section2{
+        margin-top: 35%;
+        margin-bottom: 15%;
+    }
+    .container-section3{
+        margin-top: 25%;
+        margin-bottom: 15%;
+    }
+    .container-section4{
+        margin-top: 25%;
+        margin-bottom: 15%;
+    }
+    .container-section5{
+        margin-top: 25%;
+        margin-bottom: 15%;
+    }
     .container-section5 h1{
         font-size: 2.5rem;
+    }
+    .container-section3__div-colum2{
+        padding: 0;
+    }
+    .card{
+        width: 100% !important;
+        height: 580px;
+        
+    }
+
+    .card-title{
+        font-size: 2rem;
+        margin-bottom: 1.3rem;
+    }
+
+    .card-text{
+        font-size: 1.3rem;
+        
     }
   }
 
@@ -579,7 +626,7 @@ footer{
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: #061d49;
+        background: #ffffff;
         top: 80px;
         left: -100%;
         text-align: center;
