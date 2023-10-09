@@ -305,8 +305,14 @@ position: relative;
 }
 .card{
     border-radius: 16px;
-    box-shadow: -15px 10px 25px rgba(0,0,0,0.6);
+    box-shadow: -8px 7px 18px rgba(0,0,0,0.6);
 }
+
+.card:hover{
+    box-shadow: -18px 15px 55px rgba(0,0,0,0.6);
+}
+
+
 .card-title{
     text-transform: uppercase;
     text-align: center;
@@ -582,7 +588,7 @@ footer{
     }
     .card{
         width: 100% !important;
-        height: 580px;
+        height: 590px;
         
     }
 
