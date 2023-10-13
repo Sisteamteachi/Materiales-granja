@@ -292,6 +292,28 @@ position: relative;
  
 }
 
+.contenedor-section4__div-colum3 h1{
+    text-align: center;
+    color: #276591;
+    font-size: 3rem;
+    text-transform:  uppercase;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    letter-spacing: 1rem;
+ 
+}
+
+.contenedor-section4__div-colum4{
+    display: flex; 
+    padding: 50px;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    /* background: #061d49; */
+ 
+}
+
 .contenedor2{
     margin-right: 10px;
     position: relative;
