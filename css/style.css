@@ -492,7 +492,16 @@ footer{
     color: white;
 }
 
-
+.container-section9{
+    display: flex;
+    margin: 2% 10%;
+}
+.container-section9__div-colum1{
+    width: 50%;
+}
+.container-section9__div-colum2{
+    width: 50%;
+}
 @media (max-width:1440px) {
     .banner-section{
         display: block;
