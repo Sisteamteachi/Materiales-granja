@@ -502,6 +502,8 @@ footer{
 iframe{
     border-radius: 22px;
     box-shadow:-15px 10px 25px rgba(0,0,0,0.6) ;
+    width:475px;
+    height:475px; 
 }
 .container-section9__div-colum2{
     width: 50%;
@@ -597,8 +599,13 @@ iframe{
         height: 100%;
         left: 0;
     }
+    .container-section9{
+        display: block;
+    }
   }
   @media (max-width:500px) {
+
+
     
     .banner-section{
         margin-top: 25%;
@@ -645,7 +652,6 @@ iframe{
     .card{
         width: 100% !important;
         height: 590px;
-        
     }
 
     .card-title{
@@ -654,8 +660,15 @@ iframe{
     }
 
     .card-text{
-        font-size: 1.3rem;
-        
+        font-size: 1.3rem;  
+    }
+    iframe{
+        width: 249px;
+        height: 249px;
+    }
+    .container-section9__div-colum2 p{
+        position: static;
+        text-align: center;
     }
   }
 
