@@ -532,9 +532,15 @@ iframe{
        height: 430px;
     }
 }
-@media (max-width: 1300px) {
-    body{
-        background-color: #004d80;
+@media (max-width: 1371px) {
+ 
+    
+    .banner-section{
+        margin-top: 8%;
+    }
+    .banner-section__div-colum2{
+
+        margin-top: 10%;
     }
     .container-section3__div-colum2{
         flex-wrap: wrap;

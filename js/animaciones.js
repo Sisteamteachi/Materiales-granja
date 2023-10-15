@@ -37,23 +37,23 @@ gsap.from(".carta-Mision",{
     end:"bottom 60%",
     scrub:true,
     toggleActions:"play none none reverse",
-    markers:true
+   // markers:true
   }
 })
 
 gsap.from(".carta-Vision",{
 
-  y:400,
+  y:800,
   duration:1,
   opacity:1,
   scrollTrigger:{
     trigger:".Mision_y_vision-section",
     start:"top 80%",
-    end:"bottom 100%",
+    end:"bottom 60%",
     scrub:true,
     toggleActions:"play none none reverse",
-    markers:true
-  }
+   // markers:true,
+  },
 })
 
 
