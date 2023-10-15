@@ -494,13 +494,24 @@ footer{
 
 .container-section9{
     display: flex;
-    margin: 2% 10%;
+    margin: 10% 10%;
 }
 .container-section9__div-colum1{
     width: 50%;
 }
+iframe{
+    border-radius: 22px;
+    box-shadow:-15px 10px 25px rgba(0,0,0,0.6) ;
+}
 .container-section9__div-colum2{
     width: 50%;
+    
+
+}
+.container-section9__div-colum2 p{
+    font-size: 1.6rem;
+    position: relative;
+    top: 150px;
 }
 @media (max-width:1440px) {
     .banner-section{
@@ -522,7 +533,9 @@ footer{
     }
 }
 @media (max-width: 1300px) {
-
+    body{
+        background-color: #004d80;
+    }
     .container-section3__div-colum2{
         flex-wrap: wrap;
         align-items: center;

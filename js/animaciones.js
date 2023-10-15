@@ -26,7 +26,35 @@ gsap.from(".container-section2__div", {
   });
 
 
+gsap.from(".carta-Mision",{
 
+  y:200,
+  duration:1,
+  opacity:1,
+  scrollTrigger:{
+    trigger:".Mision_y_vision-section",
+    start:"top 70%",
+    end:"bottom 60%",
+    scrub:true,
+    toggleActions:"play none none reverse",
+    markers:true
+  }
+})
+
+gsap.from(".carta-Vision",{
+
+  y:400,
+  duration:1,
+  opacity:1,
+  scrollTrigger:{
+    trigger:".Mision_y_vision-section",
+    start:"top 80%",
+    end:"bottom 100%",
+    scrub:true,
+    toggleActions:"play none none reverse",
+    markers:true
+  }
+})
 
 
 
