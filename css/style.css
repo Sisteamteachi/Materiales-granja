@@ -513,7 +513,13 @@ iframe{
     position: relative;
     top: 150px;
 }
+@media (max-width:1600px) {
+    .banner-section{
+        margin-top: 6%;
+    }
+}
 @media (max-width:1440px) {
+
     .banner-section{
         display: block;
     }
