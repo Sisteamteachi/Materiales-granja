@@ -6,6 +6,7 @@ gsap.from(".banner-section", { duration: 2.5, fadein: true, x: -600});
 gsap.from(".img1", { duration: 2.5, fadein: true, x:-280});
 gsap.from(".img2", { duration: 2.5, fadein: true, x:-200});
 gsap.from(".img3", { duration: 2.5, fadein: true, x:-100});
+gsap.from(".banner_mensaje",{duration: 4.5, fadein: true, x:-200})
 //gsap.from(".container-section2", { duration: 3.5, fadein: false, y:80});
 
 
@@ -52,17 +53,43 @@ gsap.from(".carta-Vision",{
     end:"bottom 60%",
     scrub:true,
     toggleActions:"play none none reverse",
-   // markers:true,
+   //markers:true,
   },
 })
 
 
 
+gsap.to(".container-section9",{
+
+  duration:1,
+  scrollTrigger:{
+    trigger:".container-section9",
+    start:"top 80%",
+    end:"bottom 60%",
+    scrub:true,
+    toggleActions:"play none none reverse",
+   //markers:true,
+  },
+  background:"#0B6884",
+  color:"white"
+})
 
 
 
+gsap.from(".container-section9__div-colum2",{
 
+  duration:1.5,
+  y:600,
+  scrollTrigger:{
+    trigger:".container-section9 ",
+    start:"top 80%",
+    end:"bottom 60%",
+    scrub:true,
+    toggleActions:"play none none reverse",
+  // markers:true,
+  },
 
+})
 
 
 
