@@ -1,20 +1,20 @@
 // Manejo de animaciones con GSAP
 
- gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".banner-section", { duration: 2.5, fadein: true, x: -600});
-gsap.from(".img1", { duration: 2.5, fadein: true, x:-280});
-gsap.from(".img2", { duration: 2.5, fadein: true, x:-200});
-gsap.from(".img3", { duration: 2.5, fadein: true, x:-100});
-gsap.from(".banner_mensaje",{duration: 4.5, fadein: true, x:-200})
+gsap.from(".img1", { duration: 2.6, fadein: true, x:-280});
+gsap.from(".img2", { duration: 2.5, fadein: true, x:-370});
+gsap.from(".img3", { duration: 2.3, fadein: true, x:-350});
+gsap.from(".banner_mensaje",{duration: 4.5, fadein: true, x:-500})
 //gsap.from(".container-section2", { duration: 3.5, fadein: false, y:80});
 
 
 
 gsap.from(".container-section2__div", {
   opacity: 1,                  // Opacidad final (visible)
-    y: 600,                        // Posición final (opcional: 0 para eliminar el desplazamiento vertical)
-    duration: 1,                 // Duración de la animación (en segundos)
+    y: 450,                        // Posición final (opcional: 0 para eliminar el desplazamiento vertical)
+    duration: 5,                 // Duración de la animación (en segundos)
     scrollTrigger: {
       trigger: ".container-section2", // Elemento que dispara la animación
       start: "top 70%",         // Comienza la animación cuando el 80% del elemento es visible
@@ -29,7 +29,7 @@ gsap.from(".container-section2__div", {
 
 gsap.from(".carta-Mision",{
 
-  y:200,
+  y:450,
   duration:1,
   opacity:1,
   scrollTrigger:{
@@ -44,7 +44,7 @@ gsap.from(".carta-Mision",{
 
 gsap.from(".carta-Vision",{
 
-  y:800,
+  y:950,
   duration:1,
   opacity:1,
   scrollTrigger:{
@@ -60,7 +60,6 @@ gsap.from(".carta-Vision",{
 
 
 gsap.to(".container-section9",{
-
   duration:1,
   scrollTrigger:{
     trigger:".container-section9",
@@ -70,8 +69,22 @@ gsap.to(".container-section9",{
     toggleActions:"play none none reverse",
    //markers:true,
   },
-  background:"#0B6884",
+  background:"#131811",
   color:"white"
+})
+
+gsap.from(".contacto-footer",{
+  duration:1,
+  scrollTrigger:{
+    trigger:".contacto-footer",
+    start:"top 1%",
+    end:"bottom 100%",
+    scrub:true,
+    toggleActions:"play none none reverse",
+  // markers:true,
+  },
+  background:"white",
+  color:"black"
 })
 
 
@@ -103,23 +116,23 @@ ScrollTrigger.create({
 // Galería con Swiper 
 
 const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});

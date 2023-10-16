@@ -753,6 +753,7 @@ iframe{
         left: -100%;
         text-align: center;
         transition: all .5s;
+        color: #052A38;
     }
     .navegacion-nav .navegacion-nav__ul li {
         display: block;
