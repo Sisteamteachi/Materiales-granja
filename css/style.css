@@ -18,7 +18,7 @@ header{
 .navegacion-nav{
     height: 80px;
     width: 100%;
-    background-color: #88def8;
+    background-color: #0B6884;
     position: fixed;
     margin-top: -3em;
     z-index:1000;
@@ -47,7 +47,7 @@ header{
 }
 
 .navegacion-nav .navegacion-nav__ul li a{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 7px 13px;
     font-weight: 600;
@@ -56,7 +56,7 @@ header{
 }
 
 .navegacion-nav .navegacion-nav__ul li a:hover{
-    background-color: #ffc28d;
+    background-color: #003cff79;
     border-radius: 40px;
     transition: .5;
 }
@@ -372,6 +372,7 @@ position: relative;
     height: 45vw;
     position: relative;
     left: 150px;
+    overflow: hidden;
 }
 
 
@@ -521,7 +522,13 @@ iframe{
     height:500px; 
 }
 
-
+video{
+    border-radius: 22px;
+    box-shadow:-15px 10px 25px rgba(0,0,0,0.6) ;
+    width:525px;
+    height:500px;
+    background: #000000;
+}
 
 
 @media (max-width:1600px) {
@@ -575,7 +582,7 @@ iframe{
     }
   }
 
-  @media (max-width:1050px) {
+  @media (max-width:1190px) {
     .banner-section__div-colum2{
         display: block;
     }
@@ -702,6 +709,14 @@ iframe{
     iframe{
         width: 349px;
         height: 349px;
+        margin-left: 4rem;
+        margin-top: 6.5rem;
+    }
+    video{
+        width: 349px;
+        height: 349px;
+        margin-left: 4rem;
+        margin-top: 6.5rem;
     }
     /* .container-section9__div-colum2{
         background: #004d80;
@@ -717,7 +732,7 @@ iframe{
   }
 
 
-  @media (max-width:1050px) {
+  @media (max-width:1190px) {
     .banner-section__div-colum1{
         margin-top: 5%;
         width: 100%;
@@ -753,12 +768,21 @@ iframe{
         left: -100%;
         text-align: center;
         transition: all .5s;
-        color: #052A38;
+        
     }
     .navegacion-nav .navegacion-nav__ul li {
         display: block;
         margin: 50px 0;
         line-height: 30px;
+        
+    }
+    .navegacion-nav .navegacion-nav__ul li a{
+        color: #141414;
+    }
+    .navegacion-nav .navegacion-nav__ul li a:hover{
+        background-color: #003cff79;
+        border-radius: 40px;
+        transition: .5;
     }
     #check:checked  ~ .navegacion-nav__ul{
         left: 0;

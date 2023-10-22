@@ -69,23 +69,23 @@ gsap.to(".container-section9",{
     toggleActions:"play none none reverse",
    //markers:true,
   },
-  background:"#131811",
+  background:"#0a3547",
   color:"white"
 })
 
-gsap.from(".contacto-footer",{
-  duration:1,
-  scrollTrigger:{
-    trigger:".contacto-footer",
-    start:"top 1%",
-    end:"bottom 100%",
-    scrub:true,
-    toggleActions:"play none none reverse",
-  // markers:true,
-  },
-  background:"white",
-  color:"black"
-})
+// gsap.from(".contacto-footer",{
+//   duration:1,
+//   scrollTrigger:{
+//     trigger:".contacto-footer",
+//     start:"top 1%",
+//     end:"bottom 100%",
+//     scrub:true,
+//     toggleActions:"play none none reverse",
+//   // markers:true,
+//   },
+//   background:"white",
+//   color:"black"
+// })
 
 
 
@@ -135,4 +135,16 @@ const swiper = new Swiper('.swiper', {
   scrollbar: {
     el: '.swiper-scrollbar',
   },
+  effect: "cube",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      cubeEffect: {
+        shadow: true,
+        slideShadows: false,
+        shadowOffset: 10,
+        shadowScale: 0.0001,
+      },
+    speed: 2000,
+    loop: true,
 });
