@@ -7,7 +7,7 @@
     font-family: 'Poppins';
 }
 body{
-    background-color: #f2f2f4;
+    background-color: rgb(239, 239, 255);
     overflow-x: hidden;
 }
 header{
@@ -22,9 +22,8 @@ header{
     position: fixed;
     margin-top: -3em;
     z-index:1000;
-    box-shadow: 10px 1px 50px rgb(198, 196, 196);
-
 }
+
 .navegacion-nav__a{
     width: 50%;
     margin-top: 500px;
@@ -73,138 +72,66 @@ header{
     display:none ;
 }
 
-.banner-section{
-    margin-top: 2%;
-}
-/* mitad banner 1*/
-
-
-
-/* mitad banner 2*/
-
-
-/*slider */
-.banner-section{
-    margin-top: 30px;
-    display: flex;
+.banner {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56%;
 }
 
-
-.banner-section__div-h1{
-    margin-top: 25%;
-    font-size: 2.5em;
-    margin-left: 6%;
-}
-.banner-section__div-p{
-    line-height: 2em;
-    margin-left: 3%;
-    margin-right: 6% ;
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
-.banner-section__div-colum1{
-    /* background: #8b5454; */
-    width: 30%;
-    height: 37.5vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-}
 
-.banner-h1{
-    color: #052A38;
-    font-size: 3.5rem;
-    text-transform:  uppercase;
-    font-weight: 600;
-    font-family: 'Mulish';
-    letter-spacing: .4rem;
-    margin-bottom: 100px;
-    
-}
-.span{
-    display: block  ;
-    /* font-family: 'Bebas Neue'; */
-    letter-spacing: 1rem;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-.banner-p{
-    font-size: 2rem;
-    margin-top: 3rem;
-    letter-spacing: .7rem;
-}
-
-.banner-section__div-colum2{
-    display: flex;
-    width: 70%;
-}
-
-.banner-section__div-colum2 img{
-    margin-top: 2px;
+.banner::after{
+    content:'';
+    position: absolute;
+    background-color: black;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
-    height: 105%;
+    opacity: 0.4;
+    z-index: -1;
+}
+    
+.title {
+  letter-spacing: 1rem;
+  z-index: 1;
+  font-size: 3.5vw;
+  position: relative;
+  top: 500px;
+  left: 15px;
+  font-weight: bold;
+  background: linear-gradient(-45deg, #ffffff, #9ce6ff, #ffffff, #9cc2ff, #ffffff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 10s ease infinite;
 }
 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 
-.text-centerP{
-    font-size: 2rem;
-    text-align: center;
-    color:#000000;
-    position: relative;
-    top: -8rem;
+from{
+  opacity: 0.5;
 }
-
-/*.text-centerP:hover{
-font-size: 3.8rem;
-color: #f2f2f4;
-position: relative;
-}*/
-
-.fondo-img{
-    overflow: hidden;
-    height: 37vw;
-    border-bottom-left-radius: 22px;
-    border-bottom-right-radius: 22px;
+  to{
+  opacity: 1;
 }
-
-.img1 {
-    border-bottom-left-radius: 22px;
-    position: relative; /* Asegura que los estilos se apliquen correctamente */
-    opacity: .7; /* Se puede cambiar para ajustar la transparencia */
-    transition: opacity 0.5s ease-out;
-    transform-origin: center; 
-}
-
-.img2{
-    transform-origin: center; /* Establecemos el punto de origen de la transformación en el centro */
-    opacity: .7; /* Se puede cambiar para ajustar la transparencia */
-    transition: opacity 0.5s ease-out;
-}
-
-.img3{
-    transform-origin: center; /* Establecemos el punto de origen de la transformación en el centro */
-    opacity: .7; /* Se puede cambiar para ajustar la transparencia */
-    transition: opacity 0.5s ease-out;
-    border-bottom-right-radius: 22px;
-}
-
-.img1:hover{
-    transform: scale(1.19); 
-    transition: 0.5s ease-out;
-    opacity: 1;
-}
-
-.img2:hover{
-    transform: scale(1.8);
-    transform-origin: right;
-    transition: 1.5s ease-out;
-    opacity: 1;
-}
-
-.img3:hover{
-    transform: scale(1.28);
-    transition: 0.5s ease-out;
-    opacity: 1;
 }
 
 .container-section2{
