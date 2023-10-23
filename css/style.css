@@ -678,13 +678,19 @@ video{
         /* font-family: 'Bebas Neue'; */
         letter-spacing: 1rem;
         margin-bottom: 100px;
-        
     }
   }
   @media (max-width: 894px) {
 
+    .banner{
+        height: 110vw;
+    }
+
     .title{
-        top: 50px;
+        top: 55px;
+        left: 7px;
+        font-size: 2.5rem;
+        letter-spacing: 1px;
     }
 
 
