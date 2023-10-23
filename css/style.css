@@ -480,7 +480,7 @@ video{
         height: 100%;
     }
     .carta{
-       height: 430px;
+       height: 600px;
     }
 }
 @media (max-width: 1371px) {
@@ -722,3 +722,13 @@ video{
     }
 
   } 
+
+  @media (max-width:390px) {
+    video{
+        margin-left: 20px;
+      }
+      
+      iframe{
+        margin-left: 20px;
+      }
+  }
