@@ -567,9 +567,6 @@ video{
   }
   @media (max-width:500px) {
 
-    .title{
-        top: 50px;
-    }
 
     
     .banner-section{
@@ -685,6 +682,12 @@ video{
     }
   }
   @media (max-width: 894px) {
+
+    .title{
+        top: 50px;
+    }
+
+
     .checkbtn{
         display: block;
     }
