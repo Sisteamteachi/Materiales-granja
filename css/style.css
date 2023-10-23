@@ -567,6 +567,9 @@ video{
   }
   @media (max-width:500px) {
 
+    .title{
+        top: 50px;
+    }
 
     
     .banner-section{
