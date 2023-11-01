@@ -1,0 +1,74 @@
+.sw-container{
+    margin:5% 6% ;
+    
+}
+.sw-container_colum1 h1{
+    text-align: center;
+    color: #276591;
+    font-size: 3rem;
+    text-transform:  uppercase;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    letter-spacing: 1rem;
+}
+
+.sw-container_colum2{
+    display: flex; 
+    padding: 50px;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    /* background: #061d49; */
+ 
+}
+
+.swiper {
+    width: 80vw;
+    height: 45vw;
+    position: relative;
+    left: 150px;
+
+}
+.swiper-img{
+    border-radius: 32px;
+    width: 100%;
+}
+
+.swiper-contenedor{
+    margin-right: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.swiper-contenedor img{
+    width: 100%;
+    height: 100%;
+
+}
+
+.swiper-overlay {
+    position: absolute; /* Se superpone en relación con el contenedor */
+    top: 0;
+    left: 0;
+    width: 100%; /* Toma el ancho completo del contenedor */
+    height: 100%; /* Toma la altura completa del contenedor */
+     /* Fondo semitransparente (negro en este caso) */
+    opacity: 0; /* Se puede cambiar para ajustar la transparencia */
+    transition: opacity 0.3s ease; /* Agrega una transición suave para el efecto fade */
+    border-radius: 32px;
+  }
+
+.swiper-contenedor:hover .swiper-overlay {
+  opacity: .8; 
+  background-color: #131315;
+}
+
+.swiper-overlay_content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+}

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-iba-dev';
 import '../css/navbar.css'
 const Navbar = () =>{
 
@@ -16,7 +17,7 @@ const Navbar = () =>{
                 <ul className="nv-navegacion_list-link">
 
                     <li className="nv-navegacion-link">
-                        <a href="./">Inicio</a>
+                       <Link to='/'>Inicio</Link>
                     </li>
 
                     <li className="nv-navegacion-link">
@@ -24,7 +25,8 @@ const Navbar = () =>{
                     </li>
     
                     <li className="nv-navegacion-link">
-                        <a href="./servicios/">SERVICIOS</a>
+                        <Link to='/servicios'>SERVICIOS</Link>
+
                     </li>
 
                     <li className="nv-navegacion-link">
@@ -32,7 +34,7 @@ const Navbar = () =>{
                     </li>
 
                     <li className="nv-navegacion-link">
-                        <a href="./objetivos/">objetivos</a>
+                        <Link to='/objectivos'>objetivos</Link>
                     </li>
 
                     <li className="nv-navegacion-link">
