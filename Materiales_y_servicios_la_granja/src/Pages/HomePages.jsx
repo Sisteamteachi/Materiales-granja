@@ -1,7 +1,5 @@
-import CartaInfo from '../component/cartaInfo'
-import FooterVideo from '../component/footerVideo'
-import { Mision,Vision } from '../js/mv'
-import { FrVideoHome } from '../js/frVideo'
+import { Mision,Vision } from '../js/mv.js'
+import { FrVideoHome } from '../js/frVideo.js'
 import '../css/home.css'
 const HomePage = () =>{
 
