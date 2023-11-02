@@ -1,5 +1,7 @@
 import { Mision,Vision } from '../js/mv.js'
 import { FrVideoHome } from '../js/frVideo.js'
+import CartaInfo from '../component/cartaInfo.jsx'
+import FooterVideo from '../component/footerVideo.jsx'
 import '../css/home.css'
 const HomePage = () =>{
 

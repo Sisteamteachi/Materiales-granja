@@ -1,0 +1,22 @@
+.ob-container{
+    margin:5% 6% ;
+    
+}
+
+.ob-container_colum1 h1{
+    text-align: center;
+    color: #276591;
+    font-size: 3rem;
+    text-transform:  uppercase;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    letter-spacing: 1rem;
+}
+
+.ob-container_colum2{
+    display: flex; 
+    left: 35rem;
+    padding: 50px;
+    gap: 100px
+}

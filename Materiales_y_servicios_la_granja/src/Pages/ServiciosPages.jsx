@@ -6,6 +6,7 @@ const ServiciosPages = () => {
 
     return(
         <>
+        <hr />
          <SwiperComponent title={"Maquinaria"}>
             {
                 maquinarias.map((mq,index) => {
