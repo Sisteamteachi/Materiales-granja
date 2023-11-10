@@ -7,9 +7,9 @@ const HomePage = () =>{
 
     return(
         <>
-
+           <hr />
             <article>
-
+                
                 <section className="banner">
                     <img src="https://firebasestorage.googleapis.com/v0/b/materiales-la-granja.appspot.com/o/Img%2FIMG_1309.JPG?alt=media&token=01bfc342-6b6b-4aa2-9d7f-384f25215361" />
                     <div className="p-5 text-white fw-bold text-center">

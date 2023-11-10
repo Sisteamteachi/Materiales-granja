@@ -3,7 +3,9 @@
     width: 100%;
     padding-bottom: 56%;
 }
-
+article{
+    margin-top: -10%;
+}
 .banner img {
     position: absolute;
     top: 0;

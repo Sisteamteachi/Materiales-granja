@@ -11,9 +11,9 @@ const Navbar = () =>{
                     <i className="bi bi-list"></i>
                 </label>
 
-                <a href="" className="nv-navegacion_a">
+                <Link to="/" className="nv-navegacion_a">
                     <img className="nv-navegacion-img" src="https://firebasestorage.googleapis.com/v0/b/materiales-la-granja.appspot.com/o/Img%2Flogo.png?alt=media&token=068bc1b2-9924-4ba2-845c-1200922ab34c" alt="Logo principal de la pagina"/>
-                </a>
+                </Link>
                 <ul className="nv-navegacion_list-link">
 
                     <li className="nv-navegacion-link">
