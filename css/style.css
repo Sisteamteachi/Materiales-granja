@@ -173,9 +173,11 @@ from{
 
 .container-section3__div-colum2{
     display: flex; 
-    left: 35rem;
+    align-self: center;
+    justify-content: center;
     padding: 50px;
-    gap: 100px
+    gap: 100px;
+    flex-wrap: wrap;
 }
 
   .container:hover .overlay {
