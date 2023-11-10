@@ -9,7 +9,7 @@ const EspecialesPages = () => {
             <>
              <hr />
             <article className='cn-swiper'>
-                <section>
+                <section className='cn-swiper_section'>
                     <h1>Servicios especiales</h1>
                 </section>
             <SwiperComponent title={"tractomula"}>

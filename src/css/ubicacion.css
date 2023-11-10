@@ -46,3 +46,30 @@
     border-color: #ef8e37;
 }
 
+@media (max-width: 1371px) {
+    .ubicacion_row{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1190px) {
+    .ubicacion_row{
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+    .carta-map{
+        margin-top: 50px;
+        width: 100%;
+    }
+}
+@media (max-width:500px) {
+    .cr-container{
+        margin-top: 25%;
+        margin-bottom: 15%;
+    }
+    .title-map{
+        font-size: 2.5rem;
+        letter-spacing: .5rem;
+    }
+}

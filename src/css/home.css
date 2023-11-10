@@ -171,3 +171,81 @@ video{
     height:500px;
     background: #000000;
 }
+
+
+@media (max-width:1600px) {
+    .banner {
+        margin-top: 6%;
+    }
+}
+@media (max-width:1440px) {
+    .banner {
+        display: block;
+    }
+}
+
+@media (max-width:1190px) {
+    .mv-container_row {
+        display: block;
+    }
+
+    .carta-info{
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
+    }
+
+    .fr-container-video_row{
+        display: block;
+    }
+    .fr-container-video_colum1{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .fr-container-video_colum2{
+        width: 100%;
+        
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 894px) {
+
+    .banner{
+        height: 110vw;
+    }
+
+    .banner-title{
+        top: 55px;
+        left: 7px;
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width:500px) {
+
+    .container-info .titulo{
+        font-size: 2.5rem;
+        text-align: center;
+       letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 500px) {
+    video{
+        width: 349px;
+        height: 349px;
+        margin-left: 0.5rem;
+        margin-top: 6.5rem;
+
+    }
+
+    .fr-container-video_colum2 p{
+        position: absolute;
+        text-align: center;
+        margin-top: 5%;
+    }
+}

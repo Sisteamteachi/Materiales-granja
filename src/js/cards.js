@@ -29,5 +29,6 @@ export const CARD = [
         img:'https://firebasestorage.googleapis.com/v0/b/materiales-la-granja.appspot.com/o/Img%2FVolque%20doble%20troque%20horizontal%20azul.jpg?alt=media&token=e3202ca5-ef64-4c9f-9702-57d605cb0af2',
         title:'Soluciones verdes',
         infoText:'Fomentamos la preservación ambiental mediante prácticas eco-amigables, incluyendo la gestión responsable de materias no procesables o utilizables.'
-    }
+    },
+
 ]

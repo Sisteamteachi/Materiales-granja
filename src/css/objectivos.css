@@ -16,7 +16,24 @@
 
 .ob-container_colum2{
     display: flex; 
-    left: 35rem;
+    align-self: center;
+    justify-content: center;
     padding: 50px;
-    gap: 100px
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+@media (max-width:1190px) {
+    .ob-container{
+        margin-top: 10%;
+    }
+
+}
+
+@media (max-width:500px) {
+    .ob-container_colum1 h1{
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        margin-bottom: 50px;
+    }
 }

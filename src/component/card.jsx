@@ -4,7 +4,7 @@ const Card = ({title,infoText,imgs}) => {
     return(
         <>
 
-            <section className="card" style={{width: '50rem'}}>
+            <section className="card" style={{width: '20rem'}}>
                 <img src={imgs} className="card-img-top" alt="sany horizontal"/>
                 <div className="card-body">
                     <h5 className="card-title">{title}</h5>

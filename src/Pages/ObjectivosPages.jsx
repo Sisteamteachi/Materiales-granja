@@ -12,7 +12,7 @@ const ObjectivosPages = () => {
 
 
                     <div className="ob-container_colum1">
-                        <h1>Objectivos</h1>
+                        <h1>Objetivos</h1>
                     </div>
 
                     <div className="ob-container_colum2">
