@@ -2,11 +2,7 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.from(".banner-section", { duration: 2.5, fadein: true, x: -600});
-gsap.from(".img1", { duration: 2.6, fadein: true, x:-280});
-gsap.from(".img2", { duration: 2.5, fadein: true, x:-370});
-gsap.from(".img3", { duration: 2.3, fadein: true, x:-350});
-gsap.from(".banner_mensaje",{duration: 4.5, fadein: true, x:-500})
+
 //gsap.from(".container-section2", { duration: 3.5, fadein: false, y:80});
 
 
