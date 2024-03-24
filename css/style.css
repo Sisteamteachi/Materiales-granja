@@ -381,16 +381,18 @@ width: 100%;
     box-shadow: 15px 10px 50px rgba(0,0,0,0.6);
 }
 
-.carta-Mision h1{
+.carta-Mision h2{
     margin-top: 2rem;
     margin-bottom: 3rem;
     color:#ef8e37 ;
+    text-align: center;
 }
 
-.carta-Vision h1{
+.carta-Vision h2{
     margin-top: 2rem;
     margin-bottom: 3rem;
     color: #2170c3;
+    text-align: center;
 }
 
 
