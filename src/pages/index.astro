@@ -1,25 +1,57 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Banner from '../components/Banner.astro';
-
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Banner from "../components/Banner.astro";
 ---
 
 <Layout title="Materiales y Servicios la granja">
-<main class="">
+  <main class="">
+    <Banner />
+    <section class="container mx-auto">
+      <article class="mt-[8%] mb-[8%] ml-[6%] mr-[6%]">
+        <h2
+          class="text-center text-5xl uppercase mt-4 mb-20 font-semibold text-sky-800"
+        >
+          Construyendo Éxito Juntos
+        </h2>
+        <p class="text-4xl mt-4">
+          Somos una empresa con más de una década de experiencia especializada
+          en el alquiler de maquinaria pesada, así como en la producción y
+          comercialización de materiales esenciales para la industria de la
+          construcción. Contamos con una flota de maquinaria de alta calidad y
+          una amplia gama de materiales de construcción para satisfacer las
+          necesidades de nuestros clientes.
+        </p>
+      </article>
+      <article>
+        <div class="mt-[2%] mb-[2%] ml-[10%] mr-[10%]" id="MV">
+          <h2
+            class="text-center text-5xl uppercase mt-4 mb-20 font-semibold text-sky-800"
+          >
+            Quienes Somos
+          </h2>
+          <div class="flex">
+            <Card
+              title="Misión"
+              body="Materiales La Granja es una empresa comprometida con la comunidad de Briceño y su medio ambiente, busca contribuir con el desarrollo social y económico del municipio, creando y potencializando una economía sostenible en su entorno, generando empleo y ofreciendo servicios de calidad."
+            />
 
-	<Banner/>
-	<section class="container mx-auto">
-		<article class="m-[8%,6%]">
-
-			<h2 class="text-center text-5xl uppercase mt-4 mb-20 font-semibold text-sky-800">Construyendo Éxito Juntos</h2>
-			<p class="text-4xl mt-4">
-				Somos una empresa con más de una década de experiencia especializada en el alquiler de maquinaria pesada, así como en la producción y comercialización de materiales esenciales para la industria de la construcción.
+            <!-- <div class="carta carta-Mision mt-[2%] mb-[2%] ml-[10%] mr-[10%]">
+					<h2> <i class="bi bi-map-fill"></i>  Misión</h2>
+					<p>
+						Materiales La Granja es una empresa comprometida con la comunidad de Briceño y su medio ambiente, busca contribuir con el desarrollo social y económico del municipio, creando y potencializando una economía sostenible en su entorno, generando empleo y ofreciendo servicios de calidad.
+					</p>
+				</div>
 		
-				Contamos con una flota de maquinaria de alta calidad y una amplia gama de materiales de construcción para satisfacer las necesidades de nuestros clientes.</p>
-		</article>
-	</section>
-
-</main>
+				<div class="text-center text-5xl uppercase mt-4 mb-20 font-semibold text-sky-800">
+					<h2><i class="bi bi-person-arms-up"></i> Visión</h2>
+					<p>
+						Nos proyectamos para que en el 2025 sea una empresa líder en el  mercado de Briceño y de los municipios aledaños                                                                      
+					</p>
+				</div> -->
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
 </Layout>
-
