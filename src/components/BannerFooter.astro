@@ -1,0 +1,31 @@
+---
+interface Props {
+    video:string
+    text:string
+}
+const {video,text} = Astro.props
+---
+
+
+<div class="flex max-[1024px]:flex-wrap max-[640px]:block max-[600px]:mt-5">
+    <div class="mt-[10%] w-[30%] h-[368px] ml-[3%] max-[1024px]:w-[100%] max-[1024px]:justify-center max-[1024px]:content-center max-[1024px]:flex  max-[640px]:h-auto max-[600px]:ml-[0px]">
+        <video src={video} autoplay loop muted class="w-[525px] h-[500px] shadow-[-15px_10px_25px_rgba(0,0,0,0.6)] rounded-[12px] bg-black"></video>
+    </div>
+
+    <div class="mt-[20%] w-[80%] h-[380px] ml-[5%] mr-[5%] max-[1024px]:w-[100%] max-[1024px]:h-auto  max-[600px]:ml-[0px]">
+        <p class="text-center text-3xl">
+            {text}
+        </p>
+    </div>
+</div>
+
+
+<!-- <style>
+    video{
+    border-radius: 22px;
+    box-shadow:-15px 10px 25px rgba(0,0,0,0.6) ;
+    width:525px;
+    height:500px;
+    background: #000000;
+}
+</style> -->
