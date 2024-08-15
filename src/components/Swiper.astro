@@ -1,0 +1,20 @@
+---
+interface Props {
+    img:string
+    title:string
+    text:string
+}
+const {img,title,text} = Astro.props
+---
+
+<div class="swiper-slide w-full">
+    <div class="w-full">
+        <img src={img} alt="" class="w-full h-full rounded-md">
+        <div class="absolute top-0 left-0 w-full h-[93%] opacity-0 ease-in duration-75  rounded-md hover:ease-in hover:opacity-[.8] bg-black">
+         <div class="absolute top-[50%] left-[20%] text-[24px] text-white origin-[-50%_-50%]">
+          <h2>{title}</h2>
+          <p>{text}</p>
+         </div>
+        </div>
+    </div>
+</div>
