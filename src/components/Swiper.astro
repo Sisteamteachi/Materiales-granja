@@ -5,11 +5,14 @@ interface Props {
     text:string
 }
 const {img,title,text} = Astro.props
+
+import { Image } from "astro:assets";
 ---
 
 <div class="swiper-slide w-full">
     <div class="w-full">
-        <img src={img} alt="" class="w-full h-full rounded-md">
+        <Image src={img} alt="A bird." height="100" width="100" class="w-full h-full rounded-md"/>
+        <!-- <img src={img} alt="" class="w-full h-full rounded-md"> -->
         <div class="absolute top-0 left-0 w-full h-[93%] opacity-0 ease-in duration-75  rounded-md hover:ease-in hover:opacity-[.8] bg-black">
          <div class="absolute top-[50%] left-[20%] text-[24px] text-white origin-[-50%_-50%]">
           <h2>{title}</h2>

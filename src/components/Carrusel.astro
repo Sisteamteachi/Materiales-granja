@@ -17,7 +17,7 @@ const {data} = Astro.props
       <div class="swiper-wrapper w-full">
         <!-- Los slides -->
         {
-            data.map((dt,index)=> {
+            data.map((dt:dataC)=> {
                 return(
                     <Swiper title={dt.title} img={dt.img} text={dt.text} ></Swiper>
                     

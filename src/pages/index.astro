@@ -50,58 +50,8 @@ import { CardMisionPages, CardVisionPages, BannerFooterPages,indexPages } from "
 
 </Layout>
 <style>
-
-
-
 img {
   width: 100%;
   height: auto;
 }
-
-@keyframes show {
-	from {
-		opacity: 0;
-		scale: 25%;
-	}
-
-	to {
-		opacity: 1;
-		scale: 100%;
-	}
-}
-
-.card {
-	view-timeline-name: --image;
-	view-timeline-axis: block;
-
-	animation-timeline: --image;
-	animation-name: show;
-	animation-range: entry 25% cover 30%;
-	animation-fill-mode: both;
-  
-}
-
-
-@keyframes  banner{
-  from {
-    opacity: 0;
-  }
-
-  to{
-    opacity: 1;
-    background: rgba(10, 52, 70, 0.984);
-    color: white;
-  }
-
-
-}
-.BanerFooter{
-    view-timeline-name: --banner;
-	  view-timeline-axis: block;
-	  animation-timeline: --banner;
-	  animation-name: banner;
-	  animation-range: entry 25% cover 30%;
-	  animation-fill-mode: both;
-   
-  }
 </style>

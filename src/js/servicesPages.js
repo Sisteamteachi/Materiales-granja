@@ -1,3 +1,16 @@
+export const title = "Servicios"
+export const text = "En Materiales la granja prestamos dos tipos de servicios, Extracción de materias primas para la creación de concreto y prestamos de maquinaria pesadas "
+
+export const titleMaquinaria = "Maquinaria"
+
+export const titleMateriales = "Materiales"
+
+export const BannerFooterPages = {
+    video:"/volqueta.mp4",
+    text:"Servicio de carga y descarga de materias primas y servicios de desbloqueos en derrumbes"
+}
+
+
 export const Maquinaria = [
     {
         img:"/sany-horizontal.webp",
