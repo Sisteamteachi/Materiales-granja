@@ -9,7 +9,7 @@ export const CardVisionPages = {
 };
 
 export const BannerFooterPages ={
-  video:"VideoFooter.mp4",
+  video:"https://firebasestorage.googleapis.com/v0/b/materialesgranja-d7e7d.appspot.com/o/VideoFooter.mp4?alt=media&token=a1ce2e24-57ed-466b-abd0-2396bb981c5f",
   text:"En un sector en constante evolución, nuestro compromiso es brindar servicios de alquiler de maquinaria pesada que satisfagan las diversas necesidades de nuestros clientes, respaldando su éxito en cada proyecto"
 }
 
