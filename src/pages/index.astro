@@ -9,7 +9,7 @@ import { CardMisionPages, CardVisionPages, BannerFooterPages,indexPages } from "
 
 <Layout title="Materiales y Servicios la granja">
   <main class="">
-    <Banner />
+    <Banner client:load/>
     <section>
       <article class="mt-[8%] mb-[8%] ml-[6%] mr-[6%]">
         <h2
@@ -43,7 +43,7 @@ import { CardMisionPages, CardVisionPages, BannerFooterPages,indexPages } from "
         </div>
       </article>
       <article class="mt-[10%] h-[60rem] rounded-[22px_22px_0_0] BanerFooter">
-        <BannerFooter video={BannerFooterPages.video} text={BannerFooterPages.text}/>
+        <BannerFooter video={BannerFooterPages.video} text={BannerFooterPages.text} client:load/>
       </article>
     </section>
   </main>
