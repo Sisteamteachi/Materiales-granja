@@ -1,0 +1,62 @@
+---
+import Swiper from './Swiper.astro'
+
+interface Props {
+    data:dataC[]
+}
+interface dataC {
+    img:string
+    title:string
+    text:string
+}
+const {data} = Astro.props
+---
+
+    <div class="swiper h-full left-0 w-full overflow-hidden relative">
+      <!-- Wrapper adicional requerido -->
+      <div class="swiper-wrapper w-full">
+        <!-- Los slides -->
+        {
+            data.map((dt:dataC)=> {
+                return(
+                    <Swiper title={dt.title} img={dt.img} text={dt.text} ></Swiper>
+                    
+                )
+            })
+        }
+      </div>
+      <!-- Si necesitamos paginación -->
+      <div class="swiper-pagination"></div>
+    
+      <!-- Si necesitamos botones de navegación -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    
+      <!-- Si necesitamos scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+
+
+<script>
+    import Swiper from 'swiper';
+    import 'swiper/css';
+
+    import 'swiper/css/effect-fade';
+    import 'swiper/css/navigation';
+    import 'swiper/css/pagination';
+    import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+    import "swiper/css/navigation";
+    const swiper = new Swiper(".swiper", {
+        modules: [EffectFade, Navigation, Pagination], 
+        effect: "fade",
+        grabCursor:true,
+        loop: true,          
+        spaceBetween: 0,
+        speed: 1000,
+        navigation: {          // definir botones next y prev para el módulo Navigation
+            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+        }
+    });
+</script>

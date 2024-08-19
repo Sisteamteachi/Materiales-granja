@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro"
+import CardMap from "../components/CardMap.astro"
+import {ubicacion,title} from "../js/ubicacionesPages"
+---
+
+<Layout title="Ubicaciones">
+    <main class="h-[90vh] container mx-auto max-[730px]:h-full mt-5">
+        <h1 class="text-center mt-10 text-4xl text-cyan-600 font-bold">{title}</h1>
+        <article class=" h-full flex flex-wrap  justify-between items-center gap-4 max-[730px]:justify-center max-[730px]:mt-10">
+            {
+                ubicacion.map((element)=>{
+                    return(
+                        <CardMap
+                            map={element.map}
+                            title={element.title}
+                        />
+                    )
+                })
+            }
+        </article>
+    </main>
+    <style>
+
+    </style>
+</Layout>

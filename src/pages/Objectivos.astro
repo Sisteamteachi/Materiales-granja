@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Card from "../components/Card.astro"
+import {Title,objectivos} from "../js/objectivosPages"
+---
+
+<Layout title="Objectivos">
+    <main class="container mx-auto ">
+        <h1 class="text-center  text-5xl uppercase mt-4 mb-20 font-semibold text-sky-800">{Title}</h1>
+        <article class="flex flex-col justify-center content-center ">
+            {
+                objectivos.map((element)=>{
+                    return(
+                        <Card title={element.title} img={element.img} body={element.body}/>
+                    )
+                    
+                })
+            }
+
+        </article>
+    </main>
+</Layout>

@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CardMision from "../components/CardMision.astro";
+import Banner from "../components/Banner.astro";
+import CardVision from "../components/CardVision.astro";
+import BannerFooter from "../components/BannerFooter.astro";
+import { CardMisionPages, CardVisionPages, BannerFooterPages,indexPages } from "../js/indexPages.js";
+---
+
+<Layout title="Materiales y Servicios la granja">
+  <main class="">
+    <Banner client:load/>
+    <section>
+      <article class="mt-[8%] mb-[8%] ml-[6%] mr-[6%]">
+        <h2
+          class="text-center text-5xl uppercase mt-4 mb-20 font-semibold text-sky-800 max-[600px]:text-4xl"
+        >
+          {indexPages.titleOne}
+        </h2>
+        <p class="text-4xl mt-4">
+          {indexPages.description}
+        </p>
+      </article>
+      <article>
+        <div class="mt-[2%] mb-[2%] mr-[10%] ml-[10%]" id="MV">
+          <h2
+            class="text-center text-5xl uppercase mt-4 mb-20 font-semibold text-sky-800 max-[600px]:text-4xl"
+          >
+            {indexPages.titleTwo}
+          </h2>
+          <div
+            class="card flex flex-wrap justify-between max-[1440px]:justify-center"
+          >
+            <CardMision
+              title={CardMisionPages.title}
+              body={CardMisionPages.body}
+            />
+            <CardVision
+              title={CardVisionPages.title}
+              body={CardVisionPages.body}
+            />
+          </div>
+        </div>
+      </article>
+      <article class="mt-[10%] h-[60rem] rounded-[22px_22px_0_0] BanerFooter">
+        <BannerFooter video={BannerFooterPages.video} text={BannerFooterPages.text} client:load/>
+      </article>
+    </section>
+  </main>
+
+</Layout>
+<style>
+img {
+  width: 100%;
+  height: auto;
+}
+</style>
