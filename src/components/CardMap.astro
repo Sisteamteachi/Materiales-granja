@@ -1,0 +1,14 @@
+---
+interface Props {
+    map:string,
+    title:string
+}
+const {map,title} = Astro.props
+---
+
+<div class="card relative flex flex-col min-w-0 bg-white w-[20rem] h-[20rem] rounded-md  shadow-lg hover:shadow-2xl mb-5">
+    <h2 class="text-center p-5 text-2xl text-cyan-600 font-bold">{title}</h2>
+    <div class="h-[50rem] overflow-hidden">
+        <iframe src={map} loading="lazy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
