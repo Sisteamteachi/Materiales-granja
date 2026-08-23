@@ -1,22 +1,33 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import Card from "../components/Card.astro"
-import {Title,objectivos} from "../js/objectivosPages"
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import { Title, objectivos } from "../js/objectivosPages";
 ---
 
-<Layout title="Objectivos">
-    <main class="container mx-auto ">
-        <h1 class="text-center  text-5xl uppercase mt-4 mb-20 font-semibold text-sky-800">{Title}</h1>
-        <article class="flex flex-col justify-center content-center ">
-            {
-                objectivos.map((element)=>{
-                    return(
-                        <Card title={element.title} img={element.img} body={element.body}/>
-                    )
-                    
-                })
-            }
+<Layout title="Objetivos · Materiales La Granja">
+  <!-- Page header -->
+  <section class="relative bg-ink-900 text-white py-20 overflow-hidden">
+    <div class="absolute inset-0 pattern-grid opacity-30"></div>
+    <div class="absolute -top-24 right-0 w-96 h-96 rounded-full bg-accent-500/20 blur-3xl"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block text-accent-400 text-xs font-bold uppercase tracking-[0.25em] mb-4">
+        Nuestra ruta
+      </span>
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-5">{Title}</h1>
+      <p class="text-ink-300 text-lg max-w-2xl mx-auto">
+        Construimos un modelo de negocio responsable con nuestra gente, nuestros
+        clientes y el medio ambiente.
+      </p>
+    </div>
+  </section>
 
-        </article>
-    </main>
+  <main class="py-20 lg:py-28 bg-ink-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+        {objectivos.map((element) => (
+          <Card title={element.title} img={element.img} body={element.body} />
+        ))}
+      </div>
+    </div>
+  </main>
 </Layout>

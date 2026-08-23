@@ -4,54 +4,127 @@ import CardMision from "../components/CardMision.astro";
 import Banner from "../components/Banner.astro";
 import CardVision from "../components/CardVision.astro";
 import BannerFooter from "../components/BannerFooter.astro";
-import { CardMisionPages, CardVisionPages, BannerFooterPages,indexPages } from "../js/indexPages.js";
+import { CardMisionPages, CardVisionPages, BannerFooterPages, indexPages } from "../js/indexPages.js";
+
+const services = [
+  {
+    icon: "machinery",
+    title: "Maquinaria pesada",
+    description: "Cargadores, volquetas doble troque y equipos para proyectos de gran envergadura.",
+    href: "/Servicios",
+  },
+  {
+    icon: "materials",
+    title: "Materiales pétreos",
+    description: "Sub-bases, arenas, gravillas, triturados y piedra filtro de alta calidad.",
+    href: "/Servicios",
+  },
+  {
+    icon: "tanker",
+    title: "Carros tanque",
+    description: "Transporte especializado de alimentos y agua con flota propia.",
+    href: "/ServiciosE",
+  },
+  {
+    icon: "transport",
+    title: "Carga y descarga",
+    description: "Servicios de desbloqueo en derrumbes y logística para obras civiles.",
+    href: "/ServiciosE",
+  },
+];
+
+const iconPaths: Record<string, string> = {
+  machinery: "M3 17h18l-2-7H5l-2 7ZM7 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM17 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM12 5v4M9 7l3-3 3 3",
+  materials: "M3 6h18l-2 4H5L3 6ZM5 10l1 11h12l1-11M9 14v4M15 14v4",
+  tanker: "M3 17V8h11v9M14 11h4l3 3v3M7 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM17 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z",
+  transport: "M2 17h20l-2-7H4l-2 7ZM7 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM17 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM6 10V6h6v4",
+};
 ---
 
-<Layout title="Materiales y Servicios la granja">
-  <main class="">
-    <Banner client:load/>
-    <section>
-      <article class="mt-[8%] mb-[8%] ml-[6%] mr-[6%]">
-        <h2
-          class="text-center text-5xl uppercase mt-4 mb-20 font-semibold text-sky-800 max-[600px]:text-4xl"
-        >
-          {indexPages.titleOne}
-        </h2>
-        <p class="text-4xl mt-4">
-          {indexPages.description}
-        </p>
-      </article>
-      <article>
-        <div class="mt-[2%] mb-[2%] mr-[10%] ml-[10%]" id="MV">
-          <h2
-            class="text-center text-5xl uppercase mt-4 mb-20 font-semibold text-sky-800 max-[600px]:text-4xl"
-          >
-            {indexPages.titleTwo}
-          </h2>
-          <div
-            class="card flex flex-wrap justify-between max-[1440px]:justify-center"
-          >
-            <CardMision
-              title={CardMisionPages.title}
-              body={CardMisionPages.body}
-            />
-            <CardVision
-              title={CardVisionPages.title}
-              body={CardVisionPages.body}
-            />
+<Layout title="Materiales y Servicios La Granja · Inicio">
+  <main class="flex flex-col">
+    <Banner />
+
+    <!-- ====== QUIÉNES SOMOS ====== -->
+    <section id="quienes-somos" class="relative py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+          <div class="lg:col-span-5 reveal">
+            <span class="inline-block text-brand-500 text-xs font-bold uppercase tracking-[0.25em] mb-4">
+              Quiénes somos
+            </span>
+            <h2 class="text-ink-900 text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+              {indexPages.titleOne}
+            </h2>
+            <p class="text-ink-600 text-lg leading-relaxed">
+              {indexPages.description}
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="/Servicios" class="btn-primary">
+                Nuestros servicios
+              </a>
+              <a href="/Ubicaciones" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-ink-200 text-ink-700 font-medium hover:border-brand-500 hover:text-brand-500 transition-colors">
+                Nuestras sedes
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 reveal">
+            <div class="grid sm:grid-cols-2 gap-6 items-stretch">
+              <CardMision title={CardMisionPages.title} body={CardMisionPages.body} />
+              <CardVision title={CardVisionPages.title} body={CardVisionPages.body} />
+            </div>
           </div>
         </div>
-      </article>
-      <article class="mt-[10%] h-[60rem] rounded-[22px_22px_0_0] BanerFooter">
-        <BannerFooter video={BannerFooterPages.video} text={BannerFooterPages.text} client:load/>
-      </article>
+      </div>
     </section>
-  </main>
 
+    <!-- ====== SERVICIOS ====== -->
+    <section id="servicios" class="relative py-20 lg:py-28 bg-ink-900 text-white overflow-hidden">
+      <div class="absolute inset-0 pattern-diagonal opacity-40"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 rounded-full bg-brand-500/15 blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-accent-500/15 blur-3xl"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="inline-block text-brand-400 text-xs font-bold uppercase tracking-[0.25em] mb-4">
+            Lo que hacemos
+          </span>
+          <h2 class="text-4xl md:text-5xl font-extrabold mb-5">
+            Servicios <span class="text-accent-400">integrales</span>
+          </h2>
+          <p class="text-ink-300 text-lg">
+            Soluciones completas de maquinaria, materiales y transporte para
+            cada etapa de tu obra.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+          {services.map((s) => (
+            <a
+              href={s.href}
+              class="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-7 hover:bg-white/10 hover:border-brand-500/40 transition-all duration-300"
+            >
+              <div class="w-14 h-14 rounded-xl bg-brand-500/20 flex items-center justify-center mb-5 group-hover:bg-brand-500 transition-colors">
+                <svg viewBox="0 0 24 24" class="w-7 h-7 text-brand-300 group-hover:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d={iconPaths[s.icon]}/>
+                </svg>
+              </div>
+              <h3 class="text-white text-lg font-bold mb-2">{s.title}</h3>
+              <p class="text-ink-300 text-sm leading-relaxed mb-5">{s.description}</p>
+              <span class="inline-flex items-center gap-1.5 text-accent-400 text-sm font-medium group-hover:gap-3 transition-all">
+                Conocer más
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M13 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== BANDEJA DE CTA CON VIDEO ====== -->
+    <BannerFooter video={BannerFooterPages.video} text={BannerFooterPages.text} />
+  </main>
 </Layout>
-<style>
-img {
-  width: 100%;
-  height: auto;
-}
-</style>

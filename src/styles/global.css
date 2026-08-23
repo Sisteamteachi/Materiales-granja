@@ -1,0 +1,193 @@
+@import "tailwindcss";
+
+/* ============================================
+   Materiales La Granja — Design System
+   Construction-industry inspired palette:
+   - Slate (industrial, structural)
+   - Sky Blue (primary brand)
+   - Orange (secondary accent)
+   ============================================ */
+
+@theme {
+  /* Brand colors — Sky Blue (primary) */
+  --color-brand-50: #f0f9ff;
+  --color-brand-100: #e0f2fe;
+  --color-brand-200: #bae6fd;
+  --color-brand-300: #7dd3fc;
+  --color-brand-400: #38bdf8;
+  --color-brand-500: #0ea5e9;
+  --color-brand-600: #0284c7;
+  --color-brand-700: #0369a1;
+  --color-brand-800: #075985;
+  --color-brand-900: #0c4a6e;
+
+  /* Accent colors — Orange (secondary) */
+  --color-accent-50: #fff7ed;
+  --color-accent-100: #ffedd5;
+  --color-accent-200: #fed7aa;
+  --color-accent-300: #fdba74;
+  --color-accent-400: #fb923c;
+  --color-accent-500: #f97316;
+  --color-accent-600: #ea580c;
+  --color-accent-700: #c2410c;
+  --color-accent-800: #9a3412;
+  --color-accent-900: #7c2d12;
+
+  /* Slate-based dark surface */
+  --color-ink-50: #f5f7fa;
+  --color-ink-100: #e9edf2;
+  --color-ink-200: #cdd5e0;
+  --color-ink-300: #a1aec3;
+  --color-ink-400: #6f7f99;
+  --color-ink-500: #4d5c75;
+  --color-ink-600: #38445b;
+  --color-ink-700: #28324a;
+  --color-ink-800: #1b2236;
+  --color-ink-900: #0f1424;
+  --color-ink-950: #070a16;
+
+  /* Spacing / radii */
+  --radius-card: 1rem;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-elevated: 0 24px 48px -16px rgba(15, 20, 36, 0.18);
+  --shadow-sky-glow: 0 18px 40px -12px rgba(14, 165, 233, 0.45);
+  --shadow-accent-glow: 0 18px 40px -12px rgba(249, 115, 22, 0.45);
+}
+
+/* ====== Base ====== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  color: var(--color-ink-800);
+  background: var(--color-ink-50);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ====== Reveal animations (scroll-driven) ====== */
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealFade {
+  from {
+    opacity: 0;
+    scale: 0.96;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.reveal {
+  view-timeline-name: --reveal;
+  view-timeline-axis: block;
+  animation-timeline: --reveal;
+  animation-name: revealUp;
+  animation-range: entry 10% cover 35%;
+  animation-fill-mode: both;
+}
+
+.reveal-fade {
+  view-timeline-name: --reveal-fade;
+  view-timeline-axis: block;
+  animation-timeline: --reveal-fade;
+  animation-name: revealFade;
+  animation-range: entry 15% cover 30%;
+  animation-fill-mode: both;
+}
+
+/* ====== Banner gradient animation ====== */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ====== Decorative diagonal pattern ====== */
+.pattern-diagonal {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.04) 0,
+    rgba(255, 255, 255, 0.04) 1px,
+    transparent 1px,
+    transparent 12px
+  );
+}
+
+.pattern-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ====== Buttons ====== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-brand-500);
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: var(--shadow-sky-glow);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--color-brand-600);
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  color: white;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.06);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.14);
+  transform: translateY(-2px);
+}
+
+/* ====== Card hover lift ====== */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-elevated);
+}

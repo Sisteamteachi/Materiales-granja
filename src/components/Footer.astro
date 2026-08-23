@@ -1,12 +1,113 @@
 ---
+const year = new Date().getFullYear();
 
+const links = [
+  { href: "/", label: "Inicio" },
+  { href: "/Servicios", label: "Servicios" },
+  { href: "/ServiciosE", label: "Servicios Especiales" },
+  { href: "/Objectivos", label: "Objetivos" },
+  { href: "/Ubicaciones", label: "Ubicaciones" },
+];
 ---
 
-<footer class=" w-full text-white bg-cyan-600">
-    <div class="text-center" >
-        <h1 class="mt-2 text-2xl">Contactos</h1>
-        <p class="mt-2"><i class="bi bi-envelope"></i> Correo : Myslagranja@gmail.com</p>
-        <p class="mt-2"><i class="bi bi-telephone"></i> Telefono : 3122882455-3235335328</p>
-        <p class="mt-2"><i class="bi bi-instagram"></i> Instagram: <a href="https://www.instagram.com/myslagranja" target="_blank" >@myslagranja</a></p>
+<footer class="bg-ink-950 text-ink-300">
+  <!-- CTA Strip -->
+  <div class="border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <div>
+        <h3 class="text-white text-2xl font-bold">¿Listo para tu próximo proyecto?</h3>
+        <p class="text-ink-400 mt-1">Cotiza con nosotros y recibe atención inmediata.</p>
+      </div>
+      <a href="https://wa.me/573122882455" target="_blank" rel="noopener" class="btn-primary self-start md:self-auto">
+        Contactar ahora
+        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M13 5l7 7-7 7"/>
+        </svg>
+      </a>
     </div>
+  </div>
+
+  <!-- Main footer content -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10 md:grid-cols-4">
+    <!-- Brand -->
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-11 h-11 rounded-xl bg-brand-500 flex items-center justify-center shadow-sky-glow">
+          <svg viewBox="0 0 24 24" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 17h20l-2-7H4l-2 7Z"/>
+            <circle cx="7" cy="19" r="2"/>
+            <circle cx="17" cy="19" r="2"/>
+            <path d="M12 5v5"/>
+            <path d="m9 8 3-3 3 3"/>
+          </svg>
+        </div>
+        <div class="leading-tight">
+          <p class="text-white font-bold text-base">La Granja</p>
+          <p class="text-brand-400 text-[11px] uppercase tracking-[0.18em] font-medium">Materiales & Servicios</p>
+        </div>
+      </div>
+      <p class="text-ink-400 max-w-md leading-relaxed">
+        Empresa antioqueña especializada en alquiler de maquinaria pesada,
+        producción de materiales pétreos y transporte para la industria de
+        la construcción.
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <div>
+      <h4 class="text-white font-semibold text-sm uppercase tracking-[0.18em] mb-4">Navegación</h4>
+      <ul class="space-y-2.5">
+        {links.map((l) => (
+          <li>
+            <a href={l.href} class="text-ink-400 hover:text-brand-400 transition-colors text-sm">
+              {l.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div>
+      <h4 class="text-white font-semibold text-sm uppercase tracking-[0.18em] mb-4">Contacto</h4>
+      <ul class="space-y-3 text-sm">
+        <li class="flex items-start gap-3">
+          <svg viewBox="0 0 24 24" class="w-4 h-4 mt-0.5 text-brand-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"/>
+            <path d="m22 6-10 7L2 6"/>
+          </svg>
+          <a href="mailto:Myslagranja@gmail.com" class="text-ink-400 hover:text-white transition-colors">Myslagranja@gmail.com</a>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg viewBox="0 0 24 24" class="w-4 h-4 mt-0.5 text-brand-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92Z"/>
+          </svg>
+          <a href="tel:+573122882455" class="text-ink-400 hover:text-white transition-colors">312 288 2455</a>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg viewBox="0 0 24 24" class="w-4 h-4 mt-0.5 text-brand-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+          <a href="https://www.instagram.com/myslagranja" target="_blank" rel="noopener" class="text-ink-400 hover:text-white transition-colors">@myslagranja</a>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg viewBox="0 0 24 24" class="w-4 h-4 mt-0.5 text-brand-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span class="text-ink-400">Briceño, Antioquia</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-ink-500 text-xs">© {year} Materiales y Servicios La Granja. Todos los derechos reservados.</p>
+      <p class="text-ink-500 text-xs">Hecho con compromiso · Briceño, Colombia 🇨🇴</p>
+    </div>
+  </div>
 </footer>

@@ -1,31 +1,61 @@
 ---
 interface Props {
-    video:string
-    text:string
+  video: string;
+  text: string;
 }
-const {video,text} = Astro.props
+
+const { video, text } = Astro.props;
 ---
 
+<section class="relative overflow-hidden bg-ink-900">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+    <div class="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center">
+      <!-- Video -->
+      <div class="lg:col-span-3 relative">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-accent-500/20 ring-1 ring-white/10 aspect-video">
+          <video
+            src={video}
+            autoplay
+            loop
+            muted
+            playsinline
+            class="w-full h-full object-cover"
+          ></video>
+          <div class="absolute inset-0 bg-gradient-to-tr from-ink-900/40 to-transparent pointer-events-none"></div>
+          <!-- Play badge -->
+          <div class="absolute bottom-4 left-4 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/50 backdrop-blur-sm text-white text-xs font-medium">
+            <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
+            Operación en vivo
+          </div>
+        </div>
+        <!-- Decorative offset card -->
+        <div class="absolute -bottom-6 -right-6 hidden lg:block w-32 h-32 rounded-2xl bg-accent-500 -z-10"></div>
+      </div>
 
-<div class="flex max-[1024px]:flex-wrap max-[640px]:block max-[600px]:mt-5">
-    <div class="mt-[10%] w-[30%] h-[368px] ml-[3%] max-[1024px]:w-[100%] max-[1024px]:justify-center max-[1024px]:content-center max-[1024px]:flex  max-[640px]:h-auto max-[600px]:ml-[0px]">
-        <video src={video} autoplay loop muted class="w-[525px] h-[500px] shadow-[-15px_10px_25px_rgba(0,0,0,0.6)] rounded-[12px] bg-black"></video>
-    </div>
-
-    <div class="mt-[20%] w-[80%] h-[380px] ml-[5%] mr-[5%] max-[1024px]:w-[100%] max-[1024px]:h-auto  max-[600px]:ml-[0px]">
-        <p class="text-center text-3xl">
-            {text}
+      <!-- Copy -->
+      <div class="lg:col-span-2">
+        <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent-500/15 text-accent-300 text-xs font-bold uppercase tracking-[0.2em] mb-5">
+          <span class="w-1.5 h-1.5 rounded-full bg-accent-400"></span>
+          Comprometidos
+        </span>
+        <h2 class="text-white font-bold text-3xl md:text-4xl lg:text-5xl leading-tight mb-6">
+          Soluciones a la medida de tu <span class="text-accent-400">proyecto</span>
+        </h2>
+        <p class="text-ink-200 text-lg leading-relaxed mb-8">
+          {text}
         </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="https://wa.me/573122882455" target="_blank" rel="noopener" class="btn-primary">
+            Solicitar cotización
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="/Servicios" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border border-white/20 text-white font-medium hover:bg-white/5 transition-colors">
+            Ver servicios
+          </a>
+        </div>
+      </div>
     </div>
-</div>
-
-
-<!-- <style>
-    video{
-    border-radius: 22px;
-    box-shadow:-15px 10px 25px rgba(0,0,0,0.6) ;
-    width:525px;
-    height:500px;
-    background: #000000;
-}
-</style> -->
+  </div>
+</section>

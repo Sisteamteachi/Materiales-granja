@@ -1,11 +1,95 @@
 ---
-
+const bgImage =
+  "https://firebasestorage.googleapis.com/v0/b/materialesgranja-d7e7d.appspot.com/o/Banner.webp?alt=media&token=134d8882-a331-496b-96c1-07f1a1c715fb";
 ---
 
-<section class= " relative  pb-[56%] after:bg-black  after:opacity-[.4] after:w-full after:h-full after:z-[-1] after:top-0 after:left-0" style="background-image: url(https://firebasestorage.googleapis.com/v0/b/materialesgranja-d7e7d.appspot.com/o/Banner.webp?alt=media&token=134d8882-a331-496b-96c1-07f1a1c715fb)">
-    <article class="p-5 text-white fw-bold text-center">
-        <h1 class="  tracking-[1rem] z-[100] text-[3.5vw] relative top-[500px] left-[15px] font-bold bg-gradient-to-r from-white to-cyan-300 bg-[400%] max-[1024px]:top-[250px] max-[425px]:top-[125px]" style="  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient 10s ease infinite;"> MATERIALES Y SERVICIOS LA GRANJA </h1>
-    </article>
+<section
+  class="relative min-h-[88vh] flex items-center overflow-hidden"
+  style={`background-image: url(${bgImage}); background-size: cover; background-position: center;`}
+>
+  <!-- Overlays -->
+  <div class="absolute inset-0 bg-gradient-to-r from-ink-950/95 via-ink-900/80 to-ink-900/30"></div>
+  <div class="absolute inset-0 pattern-grid opacity-30"></div>
+  <div
+    class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-brand-500/30 blur-3xl"
+  >
+  </div>
+  <div
+    class="absolute bottom-0 left-1/4 w-72 h-72 rounded-full bg-brand-500/20 blur-3xl"
+  >
+  </div>
+
+  <!-- Content -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
+    <div class="max-w-3xl">
+      <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-accent-400/40 text-accent-300 text-xs font-semibold uppercase tracking-[0.2em] mb-8">
+        <span class="w-2 h-2 rounded-full bg-accent-400 animate-pulse"></span>
+        Briceño · Antioquia
+      </span>
+
+      <h1 class="text-white font-extrabold tracking-tight leading-[0.95] text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-6">
+        Construimos
+        <span
+          class="block bg-gradient-to-r from-sky-300 via-sky-400 to-sky-600 bg-clip-text text-transparent bg-[length:300%_300%]"
+          style="animation: gradient 8s ease infinite;"
+        >
+          resultados sólidos
+        </span>
+      </h1>
+
+      <p class="text-ink-200 text-lg md:text-xl leading-relaxed max-w-2xl mb-10">
+        Más de una década moviendo maquinaria pesada, materiales pétreos y
+        soluciones integrales para la industria de la construcción en
+        Antioquia y el Norte de Colombia.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#servicios" class="btn-primary">
+          Ver servicios
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="https://wa.me/573122882455" target="_blank" rel="noopener" class="btn-ghost">
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.8 1-1 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.6-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4Z"/><path d="M20.5 3.5C18.3 1.2 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.7.9 3.7 1.4 5.7 1.4h.1c6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.5-8.3ZM12 21.8h-.1c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7.9 1-3.6-.2-.4C2.5 15.5 2 13.8 2 12 2 6.5 6.5 2 12 2c2.7 0 5.2 1 7.1 2.9 1.9 1.9 2.9 4.4 2.9 7.1 0 5.5-4.5 9.8-10 9.8Z"/></svg>
+          Cotizar ahora
+        </a>
+      </div>
+
+      <!-- Stats inline -->
+      <div class="mt-14 grid grid-cols-3 gap-4 sm:gap-10 max-w-2xl">
+        <div class="border-l-2 border-accent-500 pl-4">
+          <p class="text-white text-3xl sm:text-4xl font-bold">10+</p>
+          <p class="text-ink-300 text-xs sm:text-sm uppercase tracking-wider mt-1">Años de experiencia</p>
+        </div>
+        <div class="border-l-2 border-accent-500 pl-4">
+          <p class="text-white text-3xl sm:text-4xl font-bold">14</p>
+          <p class="text-ink-300 text-xs sm:text-sm uppercase tracking-wider mt-1">m³ por volqueta</p>
+        </div>
+        <div class="border-l-2 border-accent-500 pl-4">
+          <p class="text-white text-3xl sm:text-4xl font-bold">3</p>
+          <p class="text-ink-300 text-xs sm:text-sm uppercase tracking-wider mt-1">Sedes regionales</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <a
+    href="#quienes-somos"
+    class="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-ink-300 hover:text-accent-300 transition-colors"
+  >
+    <span class="text-[10px] uppercase tracking-[0.3em]">Descubrir</span>
+    <span class="w-px h-10 bg-gradient-to-b from-accent-400 to-transparent"></span>
+  </a>
+
+  <!-- Bottom angled divider -->
+  <svg
+    class="absolute bottom-0 left-0 w-full h-12 md:h-20 text-ink-50"
+    viewBox="0 0 1440 80"
+    preserveAspectRatio="none"
+    aria-hidden="true"
+  >
+    <path d="M0 80 L1440 80 L1440 30 Q1080 80 720 50 Q360 20 0 60 Z" fill="currentColor"/>
+  </svg>
 </section>

@@ -1,25 +1,30 @@
 ---
 interface Props {
-    img:string
+  img: string;
   title: string;
   body: string;
 }
-import Image from 'astro/components/Image.astro';
 
-const { title, body,img } = Astro.props;
+const { title, body, img } = Astro.props;
 ---
 
-
-<div class="card relative flex flex-col min-w-0 bg-white w-full rounded-md  shadow-lg hover:shadow-2xl mb-5">
-    <div class="h-[50rem] overflow-hidden">
-
-        <Image src={img} alt="a" width="10" height="10" class=" w-full  rounded-md object-cover"/>
-    </div>
-    <div class=" grow shrink basis-1 p-[1rem]">
-      <h5 class="text-center text-sky-800 text-3xl font-bold">{title}</h5>
-      <p class="text-center">{body}</p>
+<article class="group bg-white rounded-2xl overflow-hidden border border-ink-100 shadow-sm card-hover reveal">
+  <div class="relative aspect-[16/10] overflow-hidden bg-ink-100">
+    <img
+      src={img}
+      alt={title}
+      class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+      loading="lazy"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-ink-900/70 via-transparent to-transparent"></div>
+    <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-accent-500 text-white text-xs font-bold uppercase tracking-wider">
+      Objetivo
     </div>
   </div>
-
-
-  
+  <div class="p-7">
+    <h3 class="text-ink-900 text-2xl font-bold mb-3 group-hover:text-accent-500 transition-colors">
+      {title}
+    </h3>
+    <p class="text-ink-600 leading-relaxed">{body}</p>
+  </div>
+</article>

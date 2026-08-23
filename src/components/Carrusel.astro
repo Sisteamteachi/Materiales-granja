@@ -1,62 +1,86 @@
 ---
-import Swiper from './Swiper.astro'
+import Swiper from "./Swiper.astro";
+
+interface dataC {
+  img: string;
+  title: string;
+  text: string;
+}
 
 interface Props {
-    data:dataC[]
+  data: dataC[];
 }
-interface dataC {
-    img:string
-    title:string
-    text:string
-}
-const {data} = Astro.props
+
+const { data } = Astro.props;
 ---
 
-    <div class="swiper h-full left-0 w-full overflow-hidden relative">
-      <!-- Wrapper adicional requerido -->
-      <div class="swiper-wrapper w-full">
-        <!-- Los slides -->
-        {
-            data.map((dt:dataC)=> {
-                return(
-                    <Swiper title={dt.title} img={dt.img} text={dt.text} ></Swiper>
-                    
-                )
-            })
-        }
-      </div>
-      <!-- Si necesitamos paginación -->
-      <div class="swiper-pagination"></div>
-    
-      <!-- Si necesitamos botones de navegación -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    
-      <!-- Si necesitamos scrollbar -->
-      <div class="swiper-scrollbar"></div>
-    </div>
+<div class="swiper h-full w-full overflow-hidden relative reveal">
+  <div class="swiper-wrapper w-full">
+    {data.map((dt: dataC) => (
+      <Swiper title={dt.title} img={dt.img} text={dt.text} />
+    ))}
+  </div>
 
+  <div class="swiper-pagination !relative !mt-8"></div>
+  <div class="swiper-button-prev !text-ink-900 !w-12 !h-12 !bg-white !rounded-full !shadow-md after:!text-base after:!font-bold"></div>
+  <div class="swiper-button-next !text-ink-900 !w-12 !h-12 !bg-white !rounded-full !shadow-md after:!text-base after:!font-bold"></div>
+  <div class="swiper-scrollbar"></div>
+</div>
 
+<style>
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #0f1424;
+    background: white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    box-shadow: 0 8px 20px -6px rgba(15, 20, 36, 0.25);
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  .swiper-pagination-bullet {
+    background: #0f1424;
+    opacity: 0.2;
+  }
+  .swiper-pagination-bullet-active {
+    background: #f97316;
+    opacity: 1;
+  }
+</style>
 
 <script>
-    import Swiper from 'swiper';
-    import 'swiper/css';
+  import Swiper from "swiper";
+  import "swiper/css";
+  import "swiper/css/effect-fade";
+  import "swiper/css/navigation";
+  import "swiper/css/pagination";
+  import { Navigation, Pagination } from "swiper/modules";
 
-    import 'swiper/css/effect-fade';
-    import 'swiper/css/navigation';
-    import 'swiper/css/pagination';
-    import { EffectFade, Navigation, Pagination } from 'swiper/modules';
-    import "swiper/css/navigation";
-    const swiper = new Swiper(".swiper", {
-        modules: [EffectFade, Navigation, Pagination], 
-        effect: "fade",
-        grabCursor:true,
-        loop: true,          
-        spaceBetween: 0,
-        speed: 1000,
-        navigation: {          // definir botones next y prev para el módulo Navigation
-            prevEl: ".swiper-button-prev",
-            nextEl: ".swiper-button-next",
-        }
+  document.querySelectorAll(".swiper").forEach((el) => {
+    // @ts-ignore
+    new Swiper(el as HTMLElement, {
+      modules: [Navigation, Pagination],
+      grabCursor: true,
+      loop: true,
+      spaceBetween: 24,
+      speed: 700,
+      slidesPerView: 1,
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+      pagination: {
+        el: el.querySelector(".swiper-pagination"),
+        clickable: true,
+      },
+      navigation: {
+        prevEl: el.querySelector(".swiper-button-prev"),
+        nextEl: el.querySelector(".swiper-button-next"),
+      },
     });
+  });
 </script>
